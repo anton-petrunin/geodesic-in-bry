@@ -13,141 +13,116 @@
 \begin{abstract}
 We give a partial answer to the question ``When a geodesic in a Riemannian manifold can run in a convex hypersurface''.
 As a corollary we get that any convex hypersurface $S$ in a generic Riemannian manifold $M$ contains at most countable set of geodesics.
-In particular, if $\dim M\ge 3$ then most of the points on the boundary of a convex set $K\subset M$ are not interior points of geodesics in $K$.
+In particular, if $\dim M\ge 3$ then most of the points on the boundary of a convex set $\mathfrak{C}\subset M$ are not interior points of geodesics in $\mathfrak{C}$.
 \end{abstract}
 
 \section{Introduction}
- Consider  a compact subset  $A$ in a Euclidean space $\R^n$, the convex hull $K$ of $A$
- is compact and any non-extremal point of $K$ is contained in $A$. Thus,  any point in $K\setminus A$ is an inner point of a geodesic contained in $K$. More specifically,
- if $K$ has a non-empty interior,  $\partial K \setminus A$ is  a union of geodesics.  
- These well-known statements follows from Carathéodory's theorem in convex geometry and generalize in a straightforward way to the sphere $\mathbb S^n$ and the hyperbolic space.
+Let $\mathfrak{C}$ be the convex hull of a compact subset $A$ in a Euclidean space.
+By Carathéodory's theorem, any point in $\mathfrak{C}\setminus A$ is an inner point of a geodesic contained in $\mathfrak{C}$.
+In particular, if $\mathfrak{C}$ has a non-empty interior,  $\partial \mathfrak{C} \setminus A$ is  a union of geodesics.  
+These well-known statements admit straightforward generalizations to the sphere and the hyperbolic space.
  
- 
- The above statement is also easy to prove in all simply connected non-positively curved surfaces and locally in any two-dimensional Riemannian manifold.
- 
+The above statement is also easy to prove in all simply connected non-positively curved surfaces and locally in any two-dimensional Riemannian manifold.
+Recall that a set $\mathfrak{C}$ in a Riemannian manifold $M$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
+A point $x\in \mathfrak{C}$ is called \emph{extremal} if it does not lie in an interior of a geodesic $\gamma$ that lies in $\mathfrak{C}$.
 
-It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds, for instance, it is claimed in \cite[Lemma 9.1]{Ghomi}.   In the present note we prove that the somewhat counter-intuitive opposite is the case for  \emph{most} Riemannian manifolds.
+It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds. 
+For instance, it is claimed by Mohammad Ghomi and Joel Spruck \cite[Lemma 9.1]{Ghomi}.
+In the present note we prove that the somewhat counter-intuitive opposite is the case for \emph{generic} Riemannian manifolds. 
+Following \cite{eliashberg-mishachev}, we say that a \emph{generic Riemannian metric on a given class on manifold $M$ 
+has a property $P$} if the set of metric tensors $g$ that satisfy $P$ is open and dense in the space of all Riemannian metric tensors of the given class.
 
+
+\begin{thm}{Theorem}
+Let $M$ be a smooth manifold with dimesnion at least 3.
+Then, for any $k\ge 8$, generic $C^k$-smooth Riemannian metric $g$ on $M$ satisfies the following properties:
+
+\begin{subthm}{}
+The set of extremal points of any closed convex set $\mathfrak{C}\subset (M,g)$ is dense in~$\partial\mathfrak{C}$
+\end{subthm}
+
+\begin{subthm}{}
+Any convex set $\mathfrak{C}\subset (M,g)$ either is a subset of a geodesic, or has nonempty interior.
+\end{subthm}
+
+
+\begin{subthm}{}
+Let $A_1$ be any compact non-convex  subset of $(M,g)$, not contained in a minimizing  geodesic. Define  $A_k$ inductively as  the union of all minimizing geodesics connecting pairs of  points in 
+$A_{k-1}$.
+Then, $A_{k+1}\supsetneq A_k$ for all $k$;
+that is, $A_k$ is not convex for any $k$.
+\end{subthm}
+
+
+\begin{subthm}{}
+If $\dim M=3$, then for any convex closed set $\mathfrak{C}\subset (M,g)$ at most countable set of geodesics of $(M,g)$ contain all the geodesics of $(M,g)$ that run in~$\partial\mathfrak{C}$.
+\end{subthm}
+\end{thm}
+
+The proofs of all these statements (and more) are built on the following key lemma.
+Its formulation uses the notion of \emph{tangent cone} to a convex set which we are about define.
+
+Given a point $x$ in a closed convex set $\mathfrak{C}$, define its tangent cone $\K_x\mathfrak{C}$ as the closure of subset of tangent space $\T_x$ formed by all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
+Note that if $x$ lies in the interior of $\mathfrak{C}$, then $\K_x\mathfrak{C}=\T_x$.
+ 
 \begin{thm}{Key lemma}
-Suppose that a geodesic $\gamma$ in a  Riemannian manifold $M$ runs in a convex hypersurface $S\subset M$.
-Denote by $K_p$ the tangent cone of $S$ at $p\in\gamma$.
-Then $K_p$ is parallel along $\gamma$; that is a parallel translation from $x$ to $y$ along $\gamma$ sends $K_x$ to $K_y$.
+Suppose geodesic $\gamma$ lies in a closed convex set $\mathfrak{C}$ of a Riemannian manifold $M$.
+Then the tangent cone of $\mathfrak{C}$ is parallel along $\gamma$; that is, the parallel translation along $\gamma$ defines a bijection between the tangent cones $\K_x\mathfrak{C}$ and $\K_y\mathfrak{C}$ of any two interior points $x$ to $y$ of $\gamma$.
 
-Moreover, for any $V\in K_p$ we have $\Rm(V,T)T\notin $
-
-In particular, if $K_p$ contains a plane spanned by $T$ and $V$, then 
-$\Rm(V,T,T,V)$
-
-
+Moreover, for any $V\in \K_x\mathfrak{C}$ we have
+\[\Rm(V,\gamma')\gamma'\in \K_V[\K_x\mathfrak{C}],\]
+where $\Rm$ denotes the curvature tensor of $M$.
 \end{thm}
-
-
-
-
-
-In order to formulate the result we introduce some notation.   For a Riemannian manifold $(M,g)$ (always smooth in this note), and
-a non-zero tangent vector $v\in T_xM$ we denote by $v^{\perp} \subset T_xM$ the orthogonal complement of the the line generated by $v$.
-For natural number $k=0,1,...$  and a 
-tangent vector $v\in T _xM$ we denote by \emph{higher Jacobi-operators in the direction of $v$} $R^k _v :v^{\perp}_v\to v^{\perp}$ defined inductively  as follows:  
-$$R^k _v(w):=  \nabla _v (\nabla _v)...\nabla_v R (w,v)v \;.$$ 
-
-  For $k\geq 1$, we say that a Riemannian manifold $(M,g)$ satisfies the (genericity) condition
-$G_k$ if   for all points $x\in M$ and all non-zero tangent vectors $v\in Tx_M$ the symmetric endomorpshism
-$R^0 _v, R^1_v, R^2 _v,...R^k_v$ have no common invariant subspaces different from $\{0\}$ and $v^{\perp}$ in $v^{\perp}$
-
-We denote by $\mathcal G^k (M)$ the set of all Riemannian metrics on $M$ satisfying the condition $G^k$.
-Clearly, the set $\mathcal G^k (M)$ is open in the set of all smooth Riemannian metrics with respect to the 
-$\mathcal C^{k+2}$-topology.
-
- Not surprisingly $\mathcal G^k (M)$ is also dense for sufficiently large $k$ if the dimension of $M$ is at least $3$.
-The value of $k$ is probably not optimal in the following statement, which we derive from general transversality considerations:
-
-\begin{thm}{Proposition}
-Let $M$ be an $n$-dimensional smooth manifold with $n\geq 3$.  Then the set $\mathcal G^6 (M)$ is dense in the 
-$\mathcal C^{8}$ topology.  
-\end{thm}
-
-For $n>5$, the proof shows that  the value of $k$  can be decreased from $6$ to $3$, see Proposition \ref{prop:  } below. 
-The main result in this paper is that all closed convex subsets for any Riemannian manifold in this larger set $\mathcal G^k$
-behave counter-intuitively:
-
-
-\begin{thm} \label{thm: main}
-  Let $M$ be smooth   manifold of dimension at least $3$.  
-		Let $g$ be  a generic  Riemannian metric on $M$ with respect to 
-  the $\mathcal C^8$-topology.  Let $K\neq M$ be any closed convex subset of dimension larger than one in  the Riemannian manifold $(M,g)$
-  
-Then  $K$
-% is a point, or  a geodesic, or the whole manifold $M$, or $K$ 
-has  a non-empty interior and non-empty boundary $\partial K$.  Moreover, $\partial K$ contains a point $x$ with the following properties: 
-
- No geodesic contained in $\partial K$ contains the point $x$. In particular,  $x$ is not   an inner  point of any geodesic contained in $K$. 
- \end{thm} 
-
-%In fact, we show that the set of Riemannian metrics satisfying the conclusion of the above theorem contains an open
-%and dense set in the space of all smooth Riemannian metrics with respect to $\mathcal C^8$-topology.
-  
-In fact, we prove, that  \emph{most} points in $\partial K$ has the above property, namely all points for which the tangent space $T_xX$ is a Euclidean halfspace, see Theorem \ref{} below.  The last statement becomes clearer in dimension $3$:
-
-\begin{thm}{Corollary}
-  Let $g$ be a $\mathcal C^8$-generic Riemannian metric on any $3$-dimensional manifold $M$.
-  Let $K\neq M$ be any closed convex subset of $M$ of dimension $>1$.  Then $\partial K$ is a topological surface and there at most a countable number of geodesics contained  in $\partial K$. 
-\end{thm}     
-
- 
-In particular, this result implies that a $\mathcal C^8$-generic Riemannian metric on a $3$-dimensional manifold $M$ does not contain
-totally geodesic surfaces, thus extending the main result if \cite[Theorem A]{Wilhelm} to dimension $3$  (at the cost of using a somewhat finer topology), see also \cite{Bryant} for a sketch of this result.
-
-
-Theorem \ref{thm: main} implies that  building a convex hull from a given set  is always an infinite process in most Riemannian manifolds unlike the classical Euclidean case $\R^n$, where 
-the convex hull is reached after at most $n$ steps.
-
-\begin{thm}{Corollary}
- Let $g$ be a $\mathcal C^8$-generic complete Riemannian metric on any non-compact  manifold $M$ of dimension 
- at least $3$.  Let $A$ be any compact non-convex  subset of $M$, not contained in a minimizing  geodesic. Set $A=A_1$ and define  $A_k$ inductively as  the union of all minimizing geodesics connecting pairs of  points in 
-$A_{k-1}$.  Then, for all $k$, the set $A_k$ is not  convex.
-\end{thm}
-
-
-
-
-
-The  $\mathcal C^8$-topology in the statement is definitely not optimal, at least for dimensions larger than $3$, see Theorem \ref{} below.  Note, that the genericity statements in all results above can be strenthend: in fact the set of all Riemannian metrics   
-satisfying the conclusions of Theorem \ref{thm: main} and its Corollaries contains an open dense set with repsect to $\mathcal C^8$-topology.
-
-     
-
- 
- The proof is based on the following simple geometric observation, Proposition \ref{} below.
- Let a geodesic $\gamma $ in a Riemannian manifold $M$ be contained in the boundary of a convex 
- body $K\subset M$. Assume  that the tangent space $T_{\gamma (t)}K$ along $\gamma$ is a Euclidean halfspace. Then  the (in this case unique) normal vector $V(t)$ to $K$ at $\gamma (t)$
-  is parallel along $\gamma$ and an eigenvector of the Jacobi operator along $\gamma$.
-  
-  This provides a non-trivial condition on the curvature tensor  and its derivative.  A final somewhat technical step is a transversality argument showing that generically such a condition is not fulfilled along no geodesic in a Riemannian manifold $M$.
   
   
 \section{Jets of metric tenors}
 
+Let $(M,g)$ be a Riemannian manifold.
+Recall that $\Rm$ denotes the curvature tensor.
+
+Choose a tangent vector $X_p\in \T_pM$; 
+extend $X_p\in \T_p$ to a parallel vector field $X$ in the normal coordinates at $p$.
+That is, set 
+\[X_{\exp_pW}=(d_W\exp_p)X_p\] for all small $W\in \T_p$.
+Note that $(\nabla^k_X X)_p=0$ for any $k\ge 1$.
+
+Set 
+\[R=R(X)\:V\mapsto \Rm(V,X)X.\]
+Given a tensor field $S$, let us use the shortcut $S'$  for $\nabla_XS$ at $p$.
+In particular, set
+\[R^{(k)}=R^{(k)}(X)\df\nabla^k_XR(X).\]
+Note that 
+\begin{itemize}
+\item $R^{(k)}(X)\:\T_p\to\T_p$ is a self-adjoint operator and
+\item $X\mapsto R^{(k)}(X)$ is a homogenius polynomial of degree $k+2$ defined for all $X\in \T_p$.
+\end{itemize}
+
+ 
+
 
 \begin{thm}{Lemma}\label{lem:jacobi}
-For any tangent vector $T$ at a point $p$ of a Riemannian manifold manifold $M$ and any integer $n$ there are three self-adjoint operators 
-\[A_n=A_n(T),\ B_n=B_n(T),\ C_n=C_n(T)\:\T_p\to \T_p\]
+For any tangent vector $X$ at a point $p$ of a Riemannian manifold manifold $M$ and any integer $n$ there are three self-adjoint operators 
+\[A_n=A_n(X),\ B_n=B_n(X),\ C_n=C_n(X)\:\T_p\to \T_p\]
 that satisfy the following conditions:
 
 \begin{subthm}{lem:jacobi:ABC}
-For any Jacobi field $I$ along the geodesic $\gamma\:t\mapsto \exp_p(t\cdot T)$ the following identity holds at at $t=0$:
-\[T^n\langle I,I\rangle
+For any Jacobi field $I$ along the geodesic $\gamma\:t\mapsto \exp_p(t\cdot X)$ the following identity holds:
+\[\langle I,I\rangle^{(n)}
 =
-\langle A_n\cdot  I,I\rangle+ \langle B_n\cdot I,\nabla_T I\rangle+\langle C_n\cdot (\nabla_T I),\nabla_TI\rangle.\]
+\langle A_n\cdot  I,I\rangle+ \langle B_n\cdot I, I'\rangle+\langle C_n\cdot I', I'\rangle.\]
 \end{subthm}
 
 \begin{subthm}{lem:jacobi:R}
-The functions $T\mapsto A_{n}(T)$, $T\mapsto B_{n+1}(T)$ and $T\mapsto C_{n+2}(T)$ are polynomial of degree $n$.
+ $X\mapsto A_{n}(X)$, $X\mapsto B_{n+1}(X)$ and $X\mapsto C_{n+2}(X)$ are homogeneous polynomials of degree $n$ defined for all $X\in \T_p$.
 \end{subthm}
 
 \begin{subthm}{lem:jacobi:A-R}
-Set $R^{(k)}=R^{(k)}(T)\:V\mapsto (\nabla^k_T\Rm)(V,T)T$. Then the following differences  
-\[A_{n+2}-2\cdot R^{(n)},\quad B_{n+3}-2\cdot(n+2)\cdot R^{(n)},\quad C_{n+4}-2\cdot(n+1)\cdot(n+4)\cdot R^{(n)}\]
+The following differences  
+\[A_{n+2}-2\cdot R^{(n)},
+\quad 
+B_{n+3}-4\cdot(n+2)\cdot R^{(n)},
+\quad
+C_{n+4}-2\cdot(n+1)\cdot(n+4)\cdot R^{(n)}\]
 depend only on $R,R',\dots, R^{(n-2)}$.
 \end{subthm}
 
@@ -155,16 +130,10 @@ depend only on $R,R',\dots, R^{(n-2)}$.
 \end{thm}
 
 \parit{Proof.}
-Choose $T=T_0\in\T_p$;
-extend it to a neighborhood of $p$ to a parallel vector field in the normal coordinates at $p$;
-that is, set $T=(d_W\exp_p)T_0$ for small $W\in \T_p$.
-Given a tensor field $S$, let us use the shortcut $S'$  for $\nabla_TS$.
-
-Applying recursively the Jacobi identity to a Jacobi filed $I$ along the geodesic $\gamma\:t\mapsto\exp_p(t\cdot T)$, we get that the identity 
+Applying recursively the Jacobi identity $I''=-R\cdot I$ for the geodesic $\gamma\:t\mapsto\exp_p(t\cdot X)$, we get that the following identity 
 \[\langle I,I\rangle^{(n)}
 =
 \langle A_n\cdot  I,I\rangle+ \langle B_n\cdot I,I'\rangle+\langle C_n\cdot I',I'\rangle\]
-holds at $t=0$,
 where $A_0=1$, $B_0=0$, $C_0=0$, and the operators $A_n$, $B_n$, and $C_n$ satisfy the following recursive relations:
 \begin{align*}
 A_{n+1}&=A_n'-\tfrac12\cdot R\cdot B_n-\tfrac12\cdot B_n\cdot R
@@ -173,9 +142,6 @@ B_{n+1}&=B_n'+ 2\cdot A_n-C_n\cdot R-R\cdot C_n
 \\
 C_{n+1}&=C_n'+ B_n
 \end{align*}
-
-It proves part \ref{SHORT.lem:jacobi:ABC};
-by looking at the table, and applying induction, one gets~\ref{SHORT.lem:jacobi:R} and~\ref{SHORT.lem:jacobi:A-R}.\qeds
 
 \renewcommand{\arraystretch}{1.5}
 \begin{figure}[!ht]
@@ -197,64 +163,95 @@ $n$ & $A$ & $B$ & $C$ \\ \hline
 \end{tabular}
 \end{figure} 
 
-Let $g$ be a Riemannian metric on a smooth manifold $M$.
-Following \cite{eliashberg-mishachev}, we will denote by $J^n_g(p)$ its $n$-jet at the point $p$;
-it cares information on all partial derivatives of $g$ at $p$ up to order $n$.
+It proves part \ref{SHORT.lem:jacobi:ABC};
+by looking at the table, and applying induction, one gets~\ref{SHORT.lem:jacobi:R} and~\ref{SHORT.lem:jacobi:A-R}.\qeds
+
+Following \cite{eliashberg-mishachev}, we will denote by $J^n_g(p)$ the $n$-jet of a metric tensor $g$ at the point $p$;
+it cares information on all partial derivatives of $g$ at $p$ up to order~$n$ in some (and therefore every) local coordinate system at $p$.
+Equivalently, the jet $J^n_g(p)$ can be described by Taylor expansion up to degree $n$ of $g$ at $p$ (in some, and therefore every, local coordinate system at $p$).
 
 Assume $g$ is positive definite at $p$.
-Note that $J^n_g(p)$ determines the covariant derivetives of the Riemannian curvature tensor $\nabla^k\Rm(p)$ at $p$ with order $k\z\le n-2$.
+Note that $J^n_g(p)$ determines the polynomials 
+$X\mapsto R(X)$, $X\mapsto R'(X),\dots, X\mapsto R^{(n-2)}(X)$ defined for all $X\in \T_p$. 
 In other words, the map 
-\[\rho_n\:J^n_g(p)\mapsto (\Rm(p),\dots,\nabla^{n-2}\Rm(p))\]
+\[\rho_n\:J^n_g(p)\mapsto (R,\dots,R^{(n-2)})\]
 is defined.
-Note that the domain $\Dom \rho_n\subset J^n_g(p)$ of $\rho_n$ is the open set of all $n$-jets such that $g$ is positive definite at $p$.
+The domain $\Dom \rho_n\subset J^n_g(p)$ of $\rho_n$ is the open set of all $n$-jets such that $g$ is positive definite at $p$.
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:submersion}
 The map $\rho_n$ is a submersion;
-that is for any jet $J^n_g(p)\in \Dom \rho_n$ the differential $d_{J^n_g(p)}\rho_n$ has a right inverse.
+that is, for any jet $J^n_g(p)\z\in \Dom \rho_n$ the differential $d_{J^n_g(p)}\rho_n$ has a right inverse.
 \end{thm}
 
 \parit{Proof.}
 Choose a Riemannian metric $g$ in a neighborhood of $p$.
-Let $C_i=C_i(T)$ be as in \ref{lem:jacobi}.
+Let $C_i=C_i(X)$ be as in \ref{lem:jacobi}.
 
-Consider the normal coordinates at $p$.
-Choose another vector $V=V_0\in \T_p$; extend it to a parallel vector field $V$ in the normal coordinates at $p$;
-that is, $V=(d_W\exp_p)V_0$ for sufficiently small $W$.
+Choose another vector filed $V$ that is parallel in the normal coordinates at~$p$.
 
-Set $V_t=(d_{t\cdot T}\exp_p)V_0$ it is the restriction of $V$ to the geodesic $\gamma\:t\mapsto \exp_p(t\cdot T)$.
-Set $I_t=t\cdot V_t$.
+Set $V_t=V(\exp_p(t\cdot X))$ and $I_t=t\cdot V_t$.
 Note that $I$ is a Jacobi field along $\gamma$.
 Observe that $t^2\cdot \langle V_t, V_t\rangle=\langle I_t, I_t\rangle$, $I(0)=0$, and $I'(0)=V(0)$.
-Applying \ref{lem:jacobi}, we get that 
-\[\langle V_t, V_t\rangle=\sum_{i=2}^{n+2}\tfrac1{(n+2)!}\cdot\langle C_n(T)\cdot V_0,V_0\rangle+o(t^n).\]
+Applying \ref{lem:jacobi}, we get
+\[g(I_t, I_t)=\sum_{i=0}^{n+2}\tfrac1{(n+2)!}\cdot\langle C_n(X)\cdot V_0,V_0\rangle\cdot t^{n+2}+o(t^{n+2}).\]
+Since $X$ is arbitrary, we get the equality
+\[g( V, V)=\sum_{i=2}^{n+2}\tfrac1{(n+2)!}\cdot\langle C_n(X)\cdot V_0,V_0\rangle+o(|X|^{n})\]
+at the point $\exp_p X$.
 It follows that in the normal coordinates at $p$,
-the $n$-jet $J^n_g(p)$ is uniquely described by the polynomials $T\mapsto C_2(T),\dots, T\mapsto C_{n+2}(T$.
+the $n$-jet $J^n_g(p)$ is uniquely described by the polynomials
+\[X\mapsto C_2(X),
+\ \dots\ ,\  
+X\mapsto C_{n+2}(X).\]
 
-Applying \ref{lem:jacobi} inductively on $n$, we get that the differential 
-$d_{J^n_g(p)}\rho_n$ has a right inverse; hence the proposition follows.
+Applying \ref{lem:jacobi:A-R} inductively on $n$, we get that the differential 
+$d_{J^n_g(p)}\rho_n$ has a right inverse $s$.
+Moreover $s$ can be chosen so that the jets in its image correspond to metric tensors that share the normal coordinates with $g$.
+Hence the proposition follows.
 \qeds 
+
+\section{Genericity}
+
+\begin{thm}{Proposition}
+Let $M$ be a smooth manifold of dimension $n\ge 3$.
+Then a generic Riemannian metric $g$ on $M$ satisfies the following property:
+There is not tangent vector $X\ne 0$ such that the operators
+$R(X), R'(X)$, and $R''(X)$ have a common eigenvector.
+\end{thm}
+
+The proposition follows from the Thom transversality theorem \cite[2.3.2]{eliashberg-mishachev}, \ref{prop:submersion}, and the following lemma.
+
+
+\begin{thm}{Lemma}
+Let $S^k$ be the space of all $k$-tuples $A_1,\dots A_k$ of self-adjoint operators $\RR^n\to\RR^n$.
+Then the set $E$ of all $k$-tuples $(A_1,...A_k) \in S^k$  having a common eigenvector is an algebraic subset of $S^k$ of codimension $(m-1)\cdot (k-1)$.
+\end{thm}
+
+\parit{Proof.}\qeds
+
+
+
  
 \section{Notations}
  
-A subset $K$ of a Riemannian manifold $M$ is called convex if  any pair of points $x,y \in K$
-are connected by at least one minimizing geodesic $\gamma :[a,b]\to M$, which is  contained in $K$.
+A subset $\mathfrak{C}$ of a Riemannian manifold $M$ is called convex if  any pair of points $x,y \in \mathfrak{C}$
+are connected by at least one minimizing geodesic $\gamma :[a,b]\to M$, which is  contained in $\mathfrak{C}$.
 
 
 \section{Geometric arguments}
 \subsection{Structure of convex subsets}
-Let $K$ be a closed convex subset of an $n$-dimensional  Riemannian manifold $M$. Then, for some natural $k\leq n$, the subset $K$ is a topological manifold with boundary $\partial K$.
+Let $\mathfrak{C}$ be a closed convex subset of an $n$-dimensional  Riemannian manifold $M$. Then, for some natural $k\leq n$, the subset $\mathfrak{C}$ is a topological manifold with boundary $\partial \mathfrak{C}$.
 
-If $k=n$ then $\partial K$ coincides with the topological boundary of $K$ as subset of $M$ and 
-$K\setminus \partial K$ is the set of inner points of $K$ in $M$.
+If $k=n$ then $\partial \mathfrak{C}$ coincides with the topological boundary of $\mathfrak{C}$ as subset of $M$ and 
+$\mathfrak{C}\setminus \partial \mathfrak{C}$ is the set of inner points of $\mathfrak{C}$ in $M$.
 
-If $k<n$ then $K\setminus \partial K$ is a totally geodesic submanifold of $K$.
+If $k<n$ then $\mathfrak{C}\setminus \partial \mathfrak{C}$ is a totally geodesic submanifold of $\mathfrak{C}$.
 
 
 
 
 
 \subsection{Geodesic in the boundary}
-Let $M$ be  smooth Riemannian manifold, let $K\subset M$
+Let $M$ be  smooth Riemannian manifold, let $\mathfrak{C}\subset M$
 
 
 \subsection{Jacobi fields}
@@ -297,13 +294,8 @@ We claim:
 
 
 
-\subsection{Linear algebra}
-We begin with the following simple:
-\begin{thm}{Lemma}
-	Let $k,m\geq 2$ be a natural number and let  $S=Sym _m$ be the vector space of symmetric 
-	$m\times m$ matrices.  Let $E_{m,k} \subset S^k$ denote   the set of all $k$-tuples $(A_1,...A_k) \in S^k$  having a common eigenvector.   Then $E_{m,k}$ is an algebraic subset
-	of $S^k$ of codimension  $(m-1)\cdot (k-1)$.
-\end{thm}
+
+
 
 
 
