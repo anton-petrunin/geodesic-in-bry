@@ -5,37 +5,38 @@
 }
 \begin{document}
  
-\title{Geodesics that run in convex surfaces}
+\title{Peculiar properties of convex sets in generic Riemannian manifolds}
 \author{Alexander Lytchak and Anton Petrunin}
 \date{}
 \maketitle
 
 \begin{abstract}
-We give a partial answer to the question ``When a geodesic in a Riemannian manifold can run in a convex hypersurface''.
-As a corollary we get that any convex hypersurface $S$ in a generic Riemannian manifold $M$ contains at most countable set of geodesics.
-In particular, if $\dim M\ge 3$ then most of the points on the boundary of a convex set $\mathfrak{C}\subset M$ are not interior points of geodesics in $\mathfrak{C}$.
+We give a necessary condition on a geodesic in a Riemannian manifold that can run in some convex hypersurface.
+As a corollary we obtain a number of peculiar properties of \emph{all} convex sets that holds true in \emph{generic} Riemannian manifolds $M$ of dimension at least 3.
+In particular, the boundary of any convex set in $M$ contains at most countable set of geodesics.
 \end{abstract}
 
 \section{Introduction}
 Let $\mathfrak{C}$ be the convex hull of a compact subset $A$ in a Euclidean space.
 By Carathéodory's theorem, any point in $\mathfrak{C}\setminus A$ is an inner point of a geodesic contained in $\mathfrak{C}$.
-In particular, if $\mathfrak{C}$ has a non-empty interior,  $\partial \mathfrak{C} \setminus A$ is  a union of geodesics.  
+In particular, if $\mathfrak{C}$ has a non-empty interior, then $\partial \mathfrak{C} \setminus A$ is  a union of geodesics.  
 These well-known statements admit straightforward generalizations to the sphere and the hyperbolic space.
  
 The above statement is also easy to prove in all simply connected non-positively curved surfaces and locally in any two-dimensional Riemannian manifold.
 Recall that a set $\mathfrak{C}$ in a Riemannian manifold $M$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
-A point $x\in \mathfrak{C}$ is called \emph{extremal} if it does not lie in an interior of a geodesic $\gamma$ that lies in $\mathfrak{C}$.
+A point $x\in \mathfrak{C}$ is called \emph{extremal} if it does not lie in an interior of a geodesic in $\mathfrak{C}$.
 
 It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds. 
 For instance, it is claimed by Mohammad Ghomi and Joel Spruck \cite[Lemma 9.1]{Ghomi}.
 In the present note we prove that the somewhat counter-intuitive opposite is the case for \emph{generic} Riemannian manifolds. 
 Following \cite{eliashberg-mishachev}, we say that a \emph{generic Riemannian metric on a given class on manifold $M$ 
 has a property $P$} if the set of metric tensors $g$ that satisfy $P$ is open and dense in the space of all Riemannian metric tensors of the given class.
+Since the space of Riemannian metrics is \emph{Baire}, we may say that most of Riemannian metrics are generic.
 
 
 \begin{thm}{Theorem}
 Let $M$ be a smooth manifold with dimesnion at least 3.
-Then, for any $k\ge 8$, generic $C^k$-smooth Riemannian metric $g$ on $M$ satisfies the following properties:
+Then, generic smooth Riemannian metric $g$ on $M$ satisfies the following properties:
 
 \begin{subthm}{}
 The set of extremal points of any closed convex set $\mathfrak{C}\subset (M,g)$ is dense in~$\partial\mathfrak{C}$
@@ -55,18 +56,19 @@ that is, $A_k$ is not convex for any $k$.
 
 
 \begin{subthm}{}
-If $\dim M=3$, then for any convex closed set $\mathfrak{C}\subset (M,g)$ at most countable set of geodesics of $(M,g)$ contain all the geodesics of $(M,g)$ that run in~$\partial\mathfrak{C}$.
+For any convex closed set $\mathfrak{C}\subset (M,g)$ at most countable set of geodesics of $(M,g)$ contain all the geodesics that run in~$\partial\mathfrak{C}$.
 \end{subthm}
 \end{thm}
 
-The proofs of all these statements (and more) are built on the following key lemma.
+\parbf{About the proof.}
+The proofs of all these statements are built on the following key lemma.
 Its formulation uses the notion of \emph{tangent cone} to a convex set which we are about define.
 
 Given a point $x$ in a closed convex set $\mathfrak{C}$, define its tangent cone $\K_x\mathfrak{C}$ as the closure of subset of tangent space $\T_x$ formed by all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
 Note that if $x$ lies in the interior of $\mathfrak{C}$, then $\K_x\mathfrak{C}=\T_x$.
  
 \begin{thm}{Key lemma}
-Suppose geodesic $\gamma$ lies in a closed convex set $\mathfrak{C}$ of a Riemannian manifold $M$.
+Suppose that a geodesic $\gamma$ lies in a closed convex set $\mathfrak{C}$ of a Riemannian manifold $M$.
 Then the tangent cone of $\mathfrak{C}$ is parallel along $\gamma$; that is, the parallel translation along $\gamma$ defines a bijection between the tangent cones $\K_x\mathfrak{C}$ and $\K_y\mathfrak{C}$ of any two interior points $x$ to $y$ of $\gamma$.
 
 Moreover, for any $V\in \K_x\mathfrak{C}$ we have
@@ -214,7 +216,7 @@ Hence the proposition follows.
 \begin{thm}{Proposition}
 Let $M$ be a smooth manifold of dimension $n\ge 3$.
 Then a generic Riemannian metric $g$ on $M$ satisfies the following property:
-There is not tangent vector $X\ne 0$ such that the operators
+There is no tangent vector $X\ne 0$ such that the operators
 $R(X), R'(X)$, and $R''(X)$ have a common eigenvector.
 \end{thm}
 
@@ -228,78 +230,42 @@ Then the set $E$ of all $k$-tuples $(A_1,...A_k) \in S^k$  having a common eigen
 
 \parit{Proof.}\qeds
 
+\section{Jacobi fields}
+
+Тhe next observation which follows immediately from the fact that Jacobi fields describe the difference between infinitesimally close geodesics.
+All the proofs in this section are based on this observation.
 
 
- 
-\section{Notations}
- 
-A subset $\mathfrak{C}$ of a Riemannian manifold $M$ is called convex if  any pair of points $x,y \in \mathfrak{C}$
-are connected by at least one minimizing geodesic $\gamma :[a,b]\to M$, which is  contained in $\mathfrak{C}$.
-
-
-\section{Geometric arguments}
-\subsection{Structure of convex subsets}
-Let $\mathfrak{C}$ be a closed convex subset of an $n$-dimensional  Riemannian manifold $M$. Then, for some natural $k\leq n$, the subset $\mathfrak{C}$ is a topological manifold with boundary $\partial \mathfrak{C}$.
-
-If $k=n$ then $\partial \mathfrak{C}$ coincides with the topological boundary of $\mathfrak{C}$ as subset of $M$ and 
-$\mathfrak{C}\setminus \partial \mathfrak{C}$ is the set of inner points of $\mathfrak{C}$ in $M$.
-
-If $k<n$ then $\mathfrak{C}\setminus \partial \mathfrak{C}$ is a totally geodesic submanifold of $\mathfrak{C}$.
-
-
-
-
-
-\subsection{Geodesic in the boundary}
-Let $M$ be  smooth Riemannian manifold, let $\mathfrak{C}\subset M$
-
-
-\subsection{Jacobi fields}
-Let $C$ be a closed cone with non-empty interior $C^0$ in the Euclidean space $\R^m$. Let $R(t)$ be a smooth family of symmetric endomorphisms of $\R^m$ and let $\mathcal J$ denote the vector space of \emph{Jacobi fields} 
-$J:(-\epsilon, \epsilon) \to \R^m$  governed by the \emph{Jacobi equation} $J''(t)+R(t) \cdot J(t) =0$.
-
-Assume that the following condition holds true:  For any $J\in \mathcal J$, and any $a<m<b$ in the interval of definition of $R$, the inclusions $J(a),J(b) \in C$ implies that $J(m)\in C$.
-
-We claim:
-\begin{thm}{Lemma}
-	Under the above assumption, for any $t$ in the interval of definition $I$, we have 
-	$-R(t) (\partial C)  \cap C^0 =\emptyset$. 
+\begin{thm}{Observation}
+Let  $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$
+Suppose that $\gamma\:(0,1)\to\mathfrak{C}$ be a geodesic in $(M,g)$ and $I$ is a Jacobi field along $\gamma$.
+Assume that $I(t_0)\in \K_{\gamma(t_0)}\mathfrak{C}$ and $I(t_1)\in \K_{\gamma(t_1)}\mathfrak{C}$ for some $0<t_0<t_1<1$.
+Then $I(t)\in \K_{\gamma(t)}\mathfrak{C}$ for any $t\in [t_0,t_1]$.
 \end{thm}
 
-\parit{Proof.}
-	Assume the contrary. W.l.o.g. assume that the condition is violated at $t=0$.
-	Thus, for $R=R(0)$ and some $v\in \partial C$ we have $-R(v)\in C^0$.
-	
-	Consider the Jacobi field $J(t)$ uniquely defined by 
-	$J(0)=v$ and $J'(0)=0$.  
-	Then, for all small $t$ we have:
-	$$J(t)= v  -  t ^2 \cdot  (R (v)) + O(t^3)\;.$$
-	By assumption,  $J(t)$ is contained in the interior $C^0$ for small $t \neq 0$.
-	
-	Take $\delta$ so small that on the interval $(-2\delta, 2\delta)$ the Jacobi equation has no conjugate points.
-	Then, for the point $w^-= J(-\delta)$, and any point  $w$ in a neighborhood of $w^+ =J(\delta)$ there exists exactly one Jacobi field $J^w$
-		with $J(-\delta)=w^-$ and $J^w(\delta )= w$.  Moreover, the map $w\to J^w(0)$ is a local diffeomorphism.
-		
-		Thus, we find some $w$ close to $w^+$, such that $J^w (\pm \delta) \in C^0 \subset C$ and $J^w(0)$ is not contained in $C$. 
+
+\parit{Proof.} 
+Choose a subinterval $[a,b]$ in the domain of $\gamma$.
+Given a large positive integer $k$, consider arithmetic progression
+$(t_i)$ such that $t_0=a$, $t_k=b$.
+
+Givena tangent vector $I=I_0\in\T_{\gamma(a)}$, consider the sequence of vectors $I_i\in\in\T_{\gamma(t_i)}$ recurcevely by $I_{i+1}=2\cdot I_i(t_{i+1})$ where $I_i(t)$ denotes the Jacobi field along $\gamma$ such that $I_i(t_i)=I_i$ and $I_i(t_{i+2})=0$.
+
+By observation, if $I_0\in \K_{\gamma(a)}$ then $I_k\in \K_{\gamma(b)}$.
+Note that $I_k\in\T_{\gamma(b)}$ and, as $k\to \infty$, the $I_k$ converges to the parallel translation of $I_0$ along $\gamma$.
+It follows that parallel translation along $\gamma$ maps $\K_{\gamma(a)}\mathfrak{C}$ in $\K_{\gamma(b)}\mathfrak{C}$ and the other way around.
+That is, $K_\gamma(t)$ is parallel along $\gamma$.
+
+Let us use parallel translation along $\gamma$ to identify the tangent spaces at the points on $\gamma$.
+This way we will identify the tangent cones $K_{\gamma(t)}\mathfrak{C}$ for all $t$;
+denote the obtained cone by $K_\gamma\mathfrak{C}$.
+
+Consider a Jacobi field $I$ such that $I(t_0)=I(t_1)$.
+Note that 
+\[I(\tfrac{t_0+t_1}2)=I(t_0)+\tfrac14\cdot(t_1-t_0)^2\cdot R(X)\cdot I+o((t_1-t_0)^2).\]
+According to the observation, $I(\tfrac{t_0+t_1}2)\in \K_{\gamma(\frac{t_0+t_1}2)} \mathfrak{C}$.
+Therefore $R(X)\cdot I\in \K_I\K_\gamma\mathfrak{C}$.
 \qeds
-
-
-\subsection{Curvature conditon}
-
-
-
-\section{Transversality}
-\subsection{Jets of the metric and of the curvature tensor}
-
-
-
-
-
-
-
-
-
-
 
 
 \bibliographystyle{alpha}
