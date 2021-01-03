@@ -1,64 +1,74 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{paper}
-\hypersetup{pdftitle={Geodesics that run in convex surfaces}%
+\hypersetup{pdftitle={Peculiar properties of convex sets in
+most of Riemannian manifolds}%
 ,pdfauthor={Alexander Lytchak and Anton Petrunin}
 }
 \begin{document}
  
-\title{Peculiar properties of convex sets in generic Riemannian manifolds}
+\title{Properties of all convex sets in\\
+most of Riemannian manifolds}
 \author{Alexander Lytchak and Anton Petrunin}
 \date{}
 \maketitle
 
 \begin{abstract}
 We give a necessary condition on a geodesic in a Riemannian manifold that can run in some convex hypersurface.
-As a corollary we obtain a number of peculiar properties of \emph{all} convex sets that holds true in \emph{generic} Riemannian manifolds $M$ of dimension at least 3.
-In particular, the boundary of any convex set in $M$ contains at most countable set of geodesics.
+As a corollary we obtain a number of peculiar properties of \emph{all} convex sets that hold true in \emph{generic} Riemannian manifolds $(M,g)$.
+In particular, we show that the set of non-extreme points on the boundary of any convex set in $(M,g)$
+is a union of a countable set of geodesics.
 \end{abstract}
 
 \section{Introduction}
-Let $\mathfrak{C}$ be the convex hull of a compact subset $A$ in a Euclidean space.
-By Carathéodory's theorem, any point in $\mathfrak{C}\setminus A$ is an inner point of a geodesic contained in $\mathfrak{C}$.
-In particular, if $\mathfrak{C}$ has a non-empty interior, then $\partial \mathfrak{C} \setminus A$ is  a union of geodesics.  
-These well-known statements admit straightforward generalizations to the sphere and the hyperbolic space.
+Let $\mathfrak{C}$ be the convex hull of a subset $A$ in a Euclidean space.
+By Carathéodory's theorem, any point in $\mathfrak{C}\setminus A$ is an inner point of a geodesic contained in $\mathfrak{C}$;
+that is, the complement $\mathfrak{C} \setminus A$ does not contain extreme points of $\mathfrak{C}$.  
+These well-known statements admit straightforward generalizations to the sphere and the Lobachevskian space.
  
-The above statement is also easy to prove in all simply connected non-positively curved surfaces and locally in any two-dimensional Riemannian manifold.
-Recall that a set $\mathfrak{C}$ in a Riemannian manifold $M$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
-A point $x\in \mathfrak{C}$ is called \emph{extremal} if it does not lie in an interior of a geodesic in $\mathfrak{C}$.
+The above statement is also easy to prove in all simply connected non-positively curved surfaces;
+morover, locally it holds true in any two-dimensional Riemannian manifold.
+Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
+A point $x\in \mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.
 
 It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds. 
 For instance, it is claimed by Mohammad Ghomi and Joel Spruck \cite[Lemma 9.1]{Ghomi}.
 In the present note we prove that the somewhat counter-intuitive opposite is the case for \emph{generic} Riemannian manifolds. 
-Following \cite{eliashberg-mishachev}, we say that a \emph{generic Riemannian metric on a given class on manifold $M$ 
-has a property $P$} if the set of metric tensors $g$ that satisfy $P$ is open and dense in the space of all Riemannian metric tensors of the given class.
-Since the space of Riemannian metrics is \emph{Baire}, we may say that most of Riemannian metrics are generic.
+
+Following \cite{eliashberg-mishachev}, we say that a \emph{generic Riemannian metric $g$ on a manifold $M$ 
+has a property $P$} if the set of metric tensors $g$ that satisfy $P$ is open and dense in the space of all Riemannian metric tensors on $M$.
+Since the space of Riemannian metrics on $M$ is \emph{Baire}, we may say that \emph{most} of Riemannian metrics are generic.
 
 
-\begin{thm}{Theorem}
-Let $M$ be a smooth manifold with dimesnion at least 3.
-Then, generic smooth Riemannian metric $g$ on $M$ satisfies the following properties:
+\begin{thm}{Theorem}\label{thm:main}
+Let $M$ be a smooth manifold with dimension at least 3.
+
+Then, for generic smooth Riemannian metric $g$ on $M$,
+any closed convex set $\mathfrak{C}\subset (M,g)$ that is not a subset of a geodesic
+satisfies the following properties:
 
 \begin{subthm}{}
-The set of extremal points of any closed convex set $\mathfrak{C}\subset (M,g)$ is dense in~$\partial\mathfrak{C}$
+The set $\mathfrak{C}$ has nonempty interior.
 \end{subthm}
 
 \begin{subthm}{}
-Any convex set $\mathfrak{C}\subset (M,g)$ either is a subset of a geodesic, or has nonempty interior.
+The set of all non-extreme points $\partial\mathfrak{C}$ can be covered by a countable set of geodesics of $(M,g)$.
+In particular, the set of extreme points of $\mathfrak{C}$ is dense in~$\partial\mathfrak{C}$.
 \end{subthm}
 
+\end{thm}
 
-\begin{subthm}{}
-Let $A_1$ be any compact non-convex  subset of $(M,g)$, not contained in a minimizing  geodesic. Define  $A_k$ inductively as  the union of all minimizing geodesics connecting pairs of  points in 
+Note that the theorem implies that the statement of Carathéodory theorem does not hold for most of the sets in most of Riemannian manifolds.
+Namely, we get the following corollary:
+
+\begin{thm}{Corollary}
+Suppose that $g$ a geenric Riemannian metric on a smooth manifold $M$ with dimension at least 3.
+Let $A_1$ be any compact non-convex  subset of $(M,g)$, not contained in a minimizing  geodesic.
+Define  $A_k$ inductively as  the union of all minimizing geodesics connecting pairs of  points in 
 $A_{k-1}$.
 Then, $A_{k+1}\supsetneq A_k$ for all $k$;
 that is, $A_k$ is not convex for any $k$.
-\end{subthm}
-
-
-\begin{subthm}{}
-For any convex closed set $\mathfrak{C}\subset (M,g)$ at most countable set of geodesics of $(M,g)$ contain all the geodesics that run in~$\partial\mathfrak{C}$.
-\end{subthm}
 \end{thm}
+
 
 The proofs of all these statements are built on the key lemma stated in the following section; 
 it describes a necessary condition on a geodesic in a Riemannian manifold that can run in some convex hypersurface.
@@ -67,36 +77,37 @@ its formal proofs use Thom transversality theorem, and it takes the remaining se
 
 \section{Key lemma}
 
+Let $\mathfrak{C}$ be a closed convex set in a Riemannian manifold $(M,g)$.
+We will often use shortcut $\langle V,W\rangle$ for $g(V,W)$.
 
-Its formulation uses the notion of \emph{tangent cone} to a convex set which we are about define.
-
-Given a point $x$ in a closed convex set $\mathfrak{C}$, define its tangent cone $\K_x\mathfrak{C}$ as the closure of subset of tangent space $\T_x$ formed by all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
+Given a point $x\in \mathfrak{C}$, define its tangent cone $\K_x\mathfrak{C}$ as the closure of subset of tangent space $\T_x$ formed by all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
 Note that if $x$ lies in the interior of $\mathfrak{C}$, then $\K_x\mathfrak{C}=\T_x$.
 
 Given a tangent vector $X\in\T_pM$, set
 \[R(X)\:V\mapsto \Rm(V,X)X,\]
-where $\Rm$ denotes the curvature tensor of $M$.
-Note that $R(X)$ is a self-adjoint operator $\T_p\to \T_p$ and the Jacobi equation along a geodesic $\gamma$ can be written as 
+where $\Rm$ denotes the curvature tensor of $(M,g)$.
+Note that $R(X)\:\T_p\to \T_p$ is a self-adjoint operator. The Jacobi equation along a geodesic $\gamma$ can be written as 
 \[I''+R(\gamma')\cdot I=0,\]
-here we write $I''$ as a shortcut for $\nabla^2_{\gamma'}I$.
+here  $I''$ is a shortcut for $\nabla^2_{\gamma'}I$.
  
 \begin{thm}{Key lemma}\label{lem:key}
 Let $(M,g)$ be a Riemannian manifold and $\gamma$ is a geodesic in $(M,g)$ that is defined on an open interval.
 Suppose that $\gamma$ lies in a closed convex set $\mathfrak{C}\subset (M,g)$.
-Then the tangent cone of $\mathfrak{C}$ is parallel along $\gamma$; that is, the parallel translation along $\gamma$ defines a bijection between the tangent cones $\K_{\gamma(a)}\mathfrak{C}$ and $\K_{\gamma(b)}\mathfrak{C}$.
+Then the tangent cone of $\mathfrak{C}$ is parallel along $\gamma$; that is, the parallel translation along $\gamma$ defines a bijection between the tangent cones $\K_{\gamma(a)}\mathfrak{C}$ and $\K_{\gamma(b)}\mathfrak{C}$ for any $a$ and $b$.
 
-Moreover, for any $V\in \K_x\mathfrak{C}$ we have
-\[R(\gamma')\cdot V\in \K_V[\K_x\mathfrak{C}].\]
-In particular, if $E(t)$ denotes the maximal Euclidean subspace of $\K_{\gamma(t)}\mathfrak{C}$, then $E(t)$ is an invariant subspace of $R(\gamma'(t))$ for any $t$.
+Moreover, for any $V\in \K_{\gamma(a)}\mathfrak{C}$ we have
+\[R(\gamma'(a))\cdot V\in \K_V[\K_{\gamma(a)}\mathfrak{C}].\]
+In particular, if $E(a)$ denotes the maximal Euclidean subspace of $\K_{\gamma(a)}\mathfrak{C}$, then $E(a)$ is an invariant subspace of $R(\gamma'(a))$ for any $a$.
 \end{thm}
 
-The next observation follows immediately from the fact that Jacobi fields describe the difference between infinitesimally close geodesics.
+The proof is based on the next observation;
+it follows immediately from the fact that Jacobi fields describe the difference between infinitesimally close geodesics.
 
 \begin{thm}{Observation}
-Let  $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$
-Suppose that $\gamma\:(0,1)\to\mathfrak{C}$ be a geodesic in $(M,g)$ and $I$ is a Jacobi field along $\gamma$.
-Assume that $I(t_0)\in \K_{\gamma(t_0)}\mathfrak{C}$ and $I(t_1)\in \K_{\gamma(t_1)}\mathfrak{C}$ for some $0<t_0<t_1<1$.
-Then $I(t)\in \K_{\gamma(t)}\mathfrak{C}$ for any $t\in [t_0,t_1]$.
+Let  $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$.
+Suppose that $\gamma$ is a geodesic in $\mathfrak{C}$ and $I$ is a Jacobi field along $\gamma$.
+Assume that $I(a)\in \K_{\gamma(a)}\mathfrak{C}$ and $I(b)\in \K_{\gamma(b)}\mathfrak{C}$ for some $a<b$.
+Then $I(t)\in \K_{\gamma(t)}\mathfrak{C}$ for any $t\in [a,b]$.
 \end{thm}
 
 \parit{Proof of \ref{lem:key}.} 
@@ -105,32 +116,37 @@ Given a large positive integer $k$, consider arithmetic progression
 $(t_i)$ such that $t_0=a$, $t_k=b$.
 
 Choose a tangent vector $I_0\in\T_{\gamma(a)}$. 
-Consider the sequence of vectors $I_i\z\in\T_{\gamma(t_i)}$ defined the following way: $I_{i+1}=2\cdot I_i(t_{i+1})$ where $I_i(t)$ denotes the Jacobi field along $\gamma$ such that $I_i(t_i)=I_i$ and $I_i(t_{i+2})=0$.
+Consider the sequence of vectors $I_i\z\in\T_{\gamma(t_i)}$ defined the following way: $I_{i+1}=2\cdot I_i(t_{i+1})$ where $t\mapsto I_i(t)$ is the Jacobi field along $\gamma$ such that $I_i(t_i)=I_i$ and $I_i(t_{i+2})=0$;
+since $k$ is large, the mentioned Jacobi fields are uniquely defined.
 
-Set $\iota_k(I_0)\df I_k$;
+Set $\iota_k(I_0)\df I_k$.
 By the observation, if $I_0\in \K_{\gamma(a)}$ then $\iota_k(I_0)\in \K_{\gamma(b)}$.
 Note that $\iota_k(I_0)$ converges to the parallel translation of $I_0$ along $\gamma$ as $k\to \infty$.
 It follows that parallel translation along $\gamma$ maps $\K_{\gamma(a)}\mathfrak{C}$ in $\K_{\gamma(b)}\mathfrak{C}$.
-Swapping $a$ and $b$, shows that the same holds the other way around.
-That is, the tangent cone $K_\gamma(t)\mathfrak{C}$ is parallel along $\gamma$.
+Swapping $a$ and $b$, we get the opposite inclusion.
+That is, the tangent cone $K_{\gamma(t)}\mathfrak{C}$ is parallel along $\gamma$.
 
 Let us use parallel translation along $\gamma$ to identify the tangent spaces at the points on $\gamma$.
 This way we will identify the tangent cones $K_{\gamma(t)}\mathfrak{C}$ for all $t$;
 denote the obtained cone by $K_\gamma\mathfrak{C}$.
 
 Choose $I_0\in K_\gamma\mathfrak{C}$ and $\eps>0$;
-consider the Jacobi field $I$ such that $I(t_0+\eps)\z=I(t_0+\eps)=I_0$.
+consider the Jacobi field $I$ such that $I(a+\eps)\z=I(a+\eps)=I_0$.
 By Jacobi equation, we have
-\[I(t_0)=I_0+\eps^2\cdot R(\gamma'(t_0))\cdot I_0+o(\eps^2).\]
-According to the observation, $I(t_0)\in \K_{\gamma} \mathfrak{C}$.
-Since $\K_{\gamma} \mathfrak{C}$ is closed, $R(\gamma')\cdot I\z\in \K_I\K_\gamma\mathfrak{C}$.
+\[I(a)=I_0+\eps^2\cdot R(\gamma'(a))\cdot I_0+o(\eps^2).\]
+According to the observation, $I(a)\in \K_{\gamma} \mathfrak{C}$ for any $\eps>0$.
+Since $\K_{\gamma} \mathfrak{C}$ is closed, we get $R(\gamma')\cdot I\z\in \K_I\K_\gamma\mathfrak{C}$.
 
-Finally note that $I\in E(t_0)$ if and only if $\K_I\K_{\gamma(t_0)}\mathfrak{C}=\K_{\gamma(t_0)}\mathfrak{C}$.
-Therefore, if $I\in E(t_0)$, then $\pm R(\gamma'(t_0))\cdot I\in \K_{\gamma(t_0)}\mathfrak{C}$ and hence $R(\gamma'(t_0))\cdot I\in E(t_0)$.
-That is $E(t)$ is invariant subspace of $ R(\gamma'(t))$ for any $t$.
+Finally note that $I\in E(a)$ if and only if $\K_I\K_{\gamma(a)}\mathfrak{C}=\K_{\gamma(a)}\mathfrak{C}$.
+Therefore, if $I\in E(a)$, then $\pm R(\gamma'(a))\cdot I\in \K_{\gamma(a)}\mathfrak{C}$ and hence $R(\gamma'(a))\cdot I\in E(a)$.
+That is, $E(a)$ is invariant subspace of $ R(\gamma'(a))$ for any $a$.
 \qeds
   
 \section{Jets of metric tenors}\label{sec:jet}
+
+This section we calculate the Taylor expansion of metric tensor in the normal coordinates.
+This formula was derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger},
+but we present the calculations here since some notations will be used further.
 
 Let $(M,g)$ be a Riemannian manifold.
 Recall that $\Rm$ denotes the curvature tensor.
@@ -141,14 +157,14 @@ That is, set
 \[X_{\exp_pW}=(d_W\exp_p)X_p\] for all small $W\in \T_p$.
 Note that $(\nabla^k_X X)_p=0$ for any $k\ge 1$.
 
-Recall that 
-\[R=R(X)\:V\mapsto \Rm(V,X)X.\]
 Given a tensor field $S$, let us use the shortcut $S'$  for $\nabla_XS$ at $p$.
-In particular, set
+Recall that $R=R(X)\:V\mapsto \Rm(V,X)X$.
+Therefore
 \[R^{(k)}=R^{(k)}(X)\df\nabla^k_XR(X).\]
 Note that 
 \begin{itemize}
-\item $R^{(k)}(X)\:\T_p\to\T_p$ is a self-adjoint operator and
+\item $R^{(k)}(X)\:\T_p\to\T_p$ is a self-adjoint operator, 
+\item $X\perp R^{(k)}(X)\cdot V$ for any vector field $V$, and
 \item $X\mapsto R^{(k)}(X)$ is a homogenius polynomial of degree $k+2$ defined for all $X\in \T_p$.
 \end{itemize}
 
@@ -156,7 +172,7 @@ Note that
 
 
 \begin{thm}{Lemma}\label{lem:jacobi}
-For any tangent vector $X$ at a point $p$ of a Riemannian manifold manifold $M$ and any integer $n$ there are three self-adjoint operators 
+For any tangent vector $X$ at a point $p$ of a Riemannian manifold manifold $(M,g)$ and any integer $n$ there are three self-adjoint operators 
 \[A_n=A_n(X),\ B_n=B_n(X),\ C_n=C_n(X)\:\T_p\to \T_p\]
 that satisfy the following conditions:
 
@@ -242,9 +258,10 @@ that is, for any jet $J^n_g(p)\z\in \Dom \rho_n$ the differential $d_{J^n_g(p)}\
 Choose a Riemannian metric $g$ in a neighborhood of $p$.
 Let $C_i=C_i(X)$ be as in \ref{lem:jacobi}.
 
-Choose another vector filed $V$ that is parallel in the normal coordinates at~$p$.
+Choose a vector filed $V$ that is parallel in the normal coordinates at~$p$;
+that is, $V_{\exp_pW}=(d_W\exp_p)V_0$ for some $V_0\in\T_p$ and all small $W\in \T_p$.
 
-Set $V_t=V(\exp_p(t\cdot X))$ and $I_t=t\cdot V_t$.
+Set $V_t=V_{\exp_p(t\cdot X)}$ and $I_t=t\cdot V_t$.
 Note that $I$ is a Jacobi field along $\gamma$.
 Observe that $t^2\cdot \langle V_t, V_t\rangle=\langle I_t, I_t\rangle$, $I(0)=0$, and $I'(0)=V(0)$.
 Applying \ref{lem:jacobi}, we get
@@ -266,22 +283,37 @@ Hence the proposition follows.
 
 \section{Genericity}
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:R'}
 Let $M$ be a smooth manifold of dimension $n\ge 3$.
 Then a generic Riemannian metric $g$ on $M$ satisfies the following property:
-There is no tangent vector $X\ne 0$ such that the operators
-$R(X), R'(X)$, and $R''(X)$ have a common eigenvector.
+for any tangent vector $X\ne 0$ the operators
+$R(X), R'(X), \dots, R^{(4)}(X)$ have only two nontrivial common invariant subspaces: the 1-dimensional space spanned by $X$ and its orthogonal complement.
 \end{thm}
 
 The proposition follows from the Thom transversality theorem \cite[2.3.2]{eliashberg-mishachev}, \ref{prop:submersion}, and the following lemma.
 
 
 \begin{thm}{Lemma}
-Let $S^k$ be the space of all $k$-tuples $A_1,\dots A_k$ of self-adjoint operators $\RR^n\to\RR^n$.
-Then the set $E$ of all $k$-tuples $(A_1,...A_k) \in S^k$  having a common nontrivial invariant subspace is an algebraic subset of $S^k$ of codimension $(m-1)\cdot (k-1)$.
+Let $\mathfrak{S}_{k,n}$ be the space of all $k$-tuples $A_1,\dots, A_k$ of self-adjoint operators $\RR^{n-1}\to\RR^{n-1}$.
+Then the set $E$ of all $k$-tuples $(A_1,...,A_k) \in \mathfrak{S}_{k,n}$ having a common nontrivial invariant subspace is an algebraic subset of $\mathfrak{S}_{k,n}$ of codimension $(n-2)\cdot (k-1)$.
 \end{thm}
 
 \parit{Proof.}\qeds
+
+\parit{Proof of the main theorem (\ref{thm:main}).}
+Choose a geodesic $\gamma$ of $(M,g)$ defined on an open interval.
+Assume that $E(t)\subset K_{\gamma(t)}\mathfrak{C}$ is provided by the key lemma (\ref{lem:key}).
+Since the tangent cone $K_{\gamma(t)}\mathfrak{C}$ is parallel along $\gamma$, so is $E(t)$.
+
+Note that $E(t)=\T_{\gamma(t)}$ if and only if $\gamma$ runs in the interior of $\mathfrak{C}$.
+Evidently $E(t)\ni \gamma'(t)$.
+By the key lemma, $E(t)$ is invariant subspace of $R(\gamma'(t))$ for any~$t$;
+taking derivatives by $t$, we get that $E(t)$ is invariant subspace of $R^{(k)}(\gamma'(t))$ for any positive integer $k$.
+
+By \ref{prop:R'}, it follows that $E(t)$ is the 1-dimensional subspace spanned by $\gamma'(t)$.
+
+TBC
+\qeds
 
 
 \bibliographystyle{alpha}
