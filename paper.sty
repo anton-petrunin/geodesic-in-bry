@@ -3,13 +3,23 @@
 \usepackage{manfnt}
 \usepackage{enumerate}
 \usepackage{epsfig,lpic,wrapfig}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,
+%slovak,
+german,
+%french,
+english]{babel}
+
 \usepackage{hyperref}
 %\usepackage[notref,notcite,color]{showkeys}
 \hypersetup{colorlinks=true,citecolor=black,linkcolor=black,anchorcolor=black,filecolor=black,menucolor=black,urlcolor=black
 }
+
+
+
 \hyphenation{Kapo-vitch}
-
-
 
 \renewcommand{\thesubsection}{\thesection\Alph{subsection}}
 
@@ -34,26 +44,28 @@
 \def\Cone{\operatorname{Cone}}
 \def\Const{\text{\rm Const}}
 \newcommand*{\angk}[4]{\tilde\measuredangle^{#1}(#2\,{}^{#3}_{#4}\hspace{-0.2ex})}
-\def\area{\operatorname{area}}
-\def\vol{\operatorname{vol}}
-\def\diam{\operatorname{diam}}
-\def\codim{\operatorname{codim}}
-\def\dim{\operatorname{dim}}
-\def\dir{\operatorname{dir}}
+\def\area{\operatorname{\rm area}}
+\def\vol{\operatorname{\rm vol}}
+\def\diam{\operatorname{\rm diam}}
+\def\CAT{\operatorname{\rm CAT}}
+\def\codim{\operatorname{\rm codim}}
+\def\dim{\operatorname{\rm dim}}
+\def\dir{\operatorname{\rm dir}}
 \def\div{\mathop{\rm div}}
-\def\dist{\operatorname{dist}}
+\def\dist{\operatorname{\rm dist}}
 \def\Dom{\mathop{\rm Dom}\nolimits}
 \def\gexp{\mathop{\rm gexp}\nolimits}
-\def\pack{\operatorname{pack}}
-\def\Ric{\operatorname{Ric}}
-\def\pack{\operatorname{pack}}
-\def\rank{\operatorname{rank}\nolimits}
-\def\Rm{\operatorname{Rm}}
-\def\Sc{\operatorname{Sc}}
-\def\Int{\operatorname{Int}}
-\def\Str{\operatorname{Str}}
-\def\Tr{\operatorname{Tr}}
-\def\supp{\operatorname{supp}}
+\def\pack{\operatorname{\rm pack}}
+\def\Ric{\operatorname{\rm Ric}}
+\def\pack{\operatorname{\rm pack}}
+\def\rank{\operatorname{\rm rank}\nolimits}
+\def\Rm{\operatorname{\rm Rm}}
+\def\Sc{\operatorname{\rm Sc}}
+\def\Int{\operatorname{\rm Int}}
+\def\Im{\operatorname{\rm Im}}
+\def\Str{\operatorname{\rm Str}}
+\def\Tr{\operatorname{\rm Tr}}
+\def\supp{\operatorname{\rm supp}}
 \def\R{\mathbb{R}}
 \def\RR{\mathbb{R}}
 \def\SS{\mathbb{S}}
@@ -69,6 +81,7 @@
 \def\parbf#1{\medskip\noindent{\bf #1}}
 \def\qeds{\qed\par\medskip}
 \def\eps{\varepsilon}
+\def\epsilon{\varepsilon}
 \def\ge{\geqslant}
 \def\le{\leqslant}
 \def\phi{\varphi}
