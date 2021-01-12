@@ -16,7 +16,7 @@ pdfauthor={Alexander Lytchak and Anton Petrunin}
 
 \begin{abstract}
 We give a necessary condition on a geodesic in a Riemannian manifold that can run in some convex hypersurface.
-As a corollary we obtain a peculiar properties of \emph{all} convex sets that hold true in any \emph{generic} Riemannian manifold $(M,g)$.
+As a corollary we obtain peculiar properties of \emph{all} convex sets that hold true in any \emph{generic} Riemannian manifold $(M,g)$.
 For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, then it is strictly convex.
 \end{abstract}
 
@@ -26,7 +26,7 @@ By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner p
 that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
 This statement admits a straightforward generalization to the sphere and the Lobachevskian space.
 
-This statement is also easily seen to hold locally in any two-dimensional Riemannian manifold.
+This statement is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.
 (Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
 A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.)
 
@@ -36,8 +36,8 @@ In the present note we prove that the somewhat counter-intuitive opposite is the
 It agrees with general pattern: \emph{a random object in your favorite theory  looks like nothing you have ever seen before}.
 
 Further Riemannian metrics will be assumed to be $\mathcal C^\infty$-smooth.
-Given a positive integer $k$, we say that a property $P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
-if the property $P$ holds for a dense G-delta set of metric tenors in the $\mathcal C^k$-topology.
+Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
+if the property $\mathcal P$ holds for a dense G-delta set of metric tenors in the $\mathcal C^k$-topology.
 Since the space of Riemannian metrics with $\mathcal C^k$-topology on $M$ is \emph{Baire}, 
 countable intersection of dense G-delta sets, is dense.
 Therefore one can say that \emph{most} Riemannian metrics are generic.
@@ -81,14 +81,14 @@ Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth $m$-dimensiona
 Suppose $\mathfrak{C}$ is a closed convex set in $(M,g)$.
 Then all non-extreme points of $\mathfrak{C}$ have rank either $1$ or $m$.
 
-In particular, if $\dim M\ge 3$ and $\mathfrak{C}$ is bounded by a smooth hypersurface, then it is strictly convex; that is interior points of any geodesic in $\mathfrak{C}$ lie in the interior of $\mathfrak{C}$.
+In particular, if $\dim M\ge 3$ and $\mathfrak{C}$ is bounded by a smooth hypersurface, then it is strictly convex; that is, all boundary points of $\mathfrak{C}$ are extreme.
 \end{thm}
 
-A proof of a weaker version of the theorem was sketched  the second author \cite{petrunin-2009}.
+A proof of a weaker version of the proposition was sketched by the second author~\cite{petrunin-2009}.
 
 The proof of proposition is built on the key lemma stated in the following section; 
 it describes a necessary condition on a geodesic in a Riemannian manifold that can run in some convex, possibly non-smooth, hypersurface.
-If the tangent cone to the convex hypersurface at a point of the geodesic contains a plane, this condition implies a non-trivial
+If the geodesic contains a point of rank at least 2, then this condition implies a non-trivial
 statement on the curvature tensor of the manifold.
 The remaining part is straightforward: we apply the Thom transversality theorem to show that the curvature tensor of a generic Riemannian manifold does not meet this property.
 
@@ -96,17 +96,17 @@ The remaining part is straightforward: we apply the Thom transversality theorem 
 \section{Key lemma}
 
 
-Let $\mathfrak{C}$ be a closed convex set in a Riemannian manifold $(M,g)$.
-Recall that 
-the \emph{tangent cone} $\K_x\mathfrak{C}\subset \T_x$ at $x\in\mathfrak{C}$ is defined as the closure of the set of all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
-
-Note that the $\K_x\mathfrak{C}$ is a convex cone in $\T_x$ and it coincides with 
-$\T_x$ if and only if
-$x$ lies in the interior of $\mathfrak{C}$. %???REF, see, for instance, \cite{}.
+Let $\mathfrak{C}$ be a closed convex set in an $m$-dimensional Riemannian manifold $(M,g)$.
+The \emph{tangent cone} $\K_x\mathfrak{C}\subset \T_x$ at $x\in\mathfrak{C}$ is defined as the closure of the set of all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
 
 Given $x\in \mathfrak{C}$, denote by $\L_x\mathfrak{C}$ the maximal linear subspace of $\K_x\mathfrak{C}$.
 Recall that $\dim \L_x\mathfrak{C}$ is the rank of $\mathfrak{C}$ at $x$.
 
+Note that the $\K_x\mathfrak{C}$ is a convex cone in $\T_x$; in particular, $\L_x=\K_x\cap (-\K_x)$.
+Further $\K_x\mathfrak{C}$ coincides with 
+$\T_x$ if and only if
+$x$ lies in the interior of $\mathfrak{C}$.
+In other words, $x$ has rank $m$ if and only if $x$ lies in the interior of $\mathfrak{C}$.%???REF, see, for instance, \cite{}.
 
 
 Given a tangent vector $\vec{x}\in\T_pM$, set
@@ -135,7 +135,8 @@ $\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R(\gamma'(a))$.
 \end{thm}
 
 The proof uses the fact that the parallel translation can be defined via geodesics.
-In a similar way, this observation was used in \cite[Section 13]{Ber-Nik} and \cite{Petruninpar}.
+In a similar way, this observation was used in \cite[Section 13]{Ber-Nik} and~\cite{Petruninpar}.
+In fact the main part of the key lemma follows from the result in \cite{Petruninpar}.
 
 \parit{Proof of \ref{lem:key}.} 
 Since all the statements are local, we may replace $(M,g)$ by its small open convex subset.
@@ -184,7 +185,7 @@ Since $\K$ is a closed convex cone, we get $R(\gamma')\cdot \vec{v}\z\in \K_\vec
 Finally note that 
 \[\vec{v}\in \L_{\gamma(a)}\mathfrak{C}
 \quad\iff\quad 
-\pm \vec{v}\in \K
+\vec{v}, -\vec{v}\in \K
 \quad\iff\quad 
 \K_\vec{v}\K=\K.
 \]
@@ -525,6 +526,6 @@ Let $X$ be a complete length $\CAT(0)$ space (not necessary locally compact).
 Then any compact set lies in a compact convex subset of $X$.
 \end{thm}
 
-\bibliographystyle{abbrv}
+\bibliographystyle{ieeetr}
 \bibliography{convex}
 \end{document}
