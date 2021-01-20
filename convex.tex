@@ -24,10 +24,10 @@ For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, the
 Let $\mathfrak{C}$ be the convex hull of a subset $Q$ in a Euclidean space.
 By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
 that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
-This statement admits a straightforward generalization to the sphere and the {\color{red} Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.
+This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.
 
 Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
-A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.}
+A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.
 
 It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds.
 For instance, it is claimed by Mohammad Ghomi and Joel Spruck \cite[Lemma 9.1]{Ghomi}.
@@ -36,10 +36,9 @@ It agrees with the pattern: \emph{a random object in your favorite theory  looks
 
 Further Riemannian metrics will be assumed to be $\mathcal C^\infty$-smooth.
 Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
-if the property $\mathcal P$ holds for a dense G-delta set  {\color{red}(thus, a countable intersection of open dense subsets)} of metric tensors in the $\mathcal C^k$-topology.
-Since the space of Riemannian metrics  on $M$ is \emph{Baire}, {\color{red} with  respect to $\mathcal C^k$-topology, any 
-countable intersection of dense G-delta sets} is dense.
-%Therefore one can say that \emph{most} Riemannian metrics are generic.
+if the property $\mathcal P$ holds for a dense \emph{G-delta set} (that is, a countable intersection of open subsets) of metric tensors in the $\mathcal C^k$-topology.
+Since the space of Riemannian metrics  on $M$ is \emph{Baire}, with  respect to $\mathcal C^k$-topology, any 
+countable intersection of dense G-delta sets is dense.
 
 \begin{thm}{Main theorem}\label{thm:main}
 Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth manifold $M$.
@@ -62,9 +61,7 @@ Part \ref{SHORT.thm:main:interior} for $\dim M\ge 4$ is proved by Thomas Murphy 
 for $\dim M=3$ the proof was sketched by Robert Bryant \cite{Bryant}.
 
 Recall that the convex hull of a set $Q$ is defined as the minimal convex set (with respect to inclusion) that contains $Q$.
-%Note that
- {\color{red} According to Carathéodory's theorem, the convex hull of  any compact set of a Euclidean space (or sphere of the Lobachevsky space) is compact.}
- 	% has a compact convex hull.
+According to Carathéodory's theorem, the convex hull of  any compact set of a Euclidean space (or sphere of the Lobachevsky space) is compact.
 According to the following corollary, the latter does not hold in most Riemannian manifolds.
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
@@ -81,19 +78,19 @@ Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth $m$-dimensiona
 Suppose $\mathfrak{C}$ is a closed convex set in $(M,g)$.
 Then all non-extreme points of $\mathfrak{C}$ have rank either $1$ or $m$.
 
-In particular, if $\dim M\ge 3$ and $\mathfrak{C}$ is bounded by a {\color{red} $\mathcal{C}^1$ hypersurface, then $\mathfrak{C}$} is \emph{strictly convex}; that is, all boundary points of $\mathfrak{C}$ are extreme.
+In particular, if $\dim M\ge 3$ and $\mathfrak{C}$ is bounded by a $\mathcal{C}^1$-smooth hypersurface, then $\mathfrak{C}$ is \emph{strictly convex};
+that is, all boundary points of $\mathfrak{C}$ are extreme.
 \end{thm}
 
-{\color{red} A  weaker version} of this proposition was sketched by the second author~\cite{petrunin-2009}.  
-%\footnote{Can we weaken the reference to your proof in mathover flow as done now below?}
+A  weaker version of this proposition was sketched by the second author~\cite{petrunin-2009}.  
 
 The proof of the proposition is built on the key lemma stated in the following section;   
-it describes a necessary condition on a geodesic in a Riemannian manifold that {\color{red} stays}
+it describes a necessary condition on a geodesic in a Riemannian manifold that stays
 % can run 
 in some convex, possibly non-smooth, hypersurface.
 If the geodesic contains a point of rank at least 2, then this condition implies a non-trivial
 statement on the curvature tensor of the manifold.
-The remaining part is {\color{red} slightly technical but}  straightforward: we show that the curvature tensor of a generic Riemannian manifold does not meet this property; this is done by applying the Thom transversality theorem.
+The remaining part is slightly technical but straightforward: we show that the curvature tensor of a generic Riemannian manifold does not meet this property; this is done by applying the Thom transversality theorem.
 
 
 \section{Key lemma}
@@ -106,7 +103,7 @@ The \emph{tangent cone} $\K_x\mathfrak{C}\subset \T_x$ at $x\in\mathfrak{C}$ is 
 Given $x\in \mathfrak{C}$, denote by $\L_x\mathfrak{C}$ the \emph{maximal linear subspace} of $\K_x\mathfrak{C}$.
 The \emph{rank} of $\mathfrak{C}$ at $x$ is defined as $\dim \L_x\mathfrak{C}$.
 
-Note {\color{red} that} $\K_x\mathfrak{C}$ is a convex cone in $\T_x$; in particular, $\L_x=\K_x\cap (-\K_x)$.
+Note that $\K_x\mathfrak{C}$ is a convex cone in $\T_x$; in particular, $\L_x=\K_x\cap (-\K_x)$.
 Further $\K_x\mathfrak{C}$ coincides with 
 $\T_x$ if and only if
 $x$ lies in the interior of $\mathfrak{C}$.
@@ -117,8 +114,7 @@ Given a tangent vector $\vec{x}\in\T_pM$, consider the so called \emph{Jacobi op
 \[R(\vec{x})\:\vec{v}\mapsto \Rm(\vec{v},\vec{x})\vec{x},\]
 where $\Rm$ denotes the curvature tensor of $g$.
 Note that $R(\vec{x})\:\T_p\to \T_p$ is a self-adjoint operator.
-%Note that
-{\color{red} The} Jacobi equation along a geodesic $\gamma$ takes form 
+The Jacobi equation along a geodesic $\gamma$ takes form 
 \[\vec{i}''+R(\gamma')\cdot \vec{i}=0,\]
 here $\vec{i}''$ is a shortcut for $\nabla^2_{\gamma'}\vec{i}$.
 
@@ -140,20 +136,16 @@ $\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R(\gamma'(a))$.
 
 The proof uses the fact that the parallel translation can be defined via geodesics.
 In a similar way, this observation was used in \cite[Section 13]{Ber-Nik} and~\cite{Petruninpar}.
-In fact the main part of the key lemma follows {\color{red} from} %the result in 
+In fact the main part of the key lemma follows from
 \cite{Petruninpar}.
 
 \parit{Proof of \ref{lem:key}.} 
-Since {\color{red} all 
-	%the
-	 statements} are local, we may replace $(M,g)$ by its small open convex subset.
-By doing so we may assume that any pair of points of $(M,g)$ {\color{red} is  } connected by a unique geodesic and {\color{red} there are } no conjugate points.
+Since all statements are local, we may replace $(M,g)$ by its small open convex subset.
+By doing so we may assume that any pair of points of $(M,g)$ is connected by a unique geodesic and there are no conjugate points.
 In particular, for any subinterval $[a,b]\subset (a_0,b_0)$ and any tangent vectors $\vec{v} \in \T_{\gamma (a)}$ and $\vec{w} \in \T_{\gamma (b)}$ there exists unique Jacobi field $\vec{i}$ along $\gamma$ 
 such that $\vec{i}(a)=\vec{v}$ and $\vec{i}(b)=\vec{w}$.
 
-Since Jacobi fields are variational fields of geodesic variations, {\color{red} 
-	%the 
-	convexity  } of $\mathfrak{C}$ implies the following: 
+Since Jacobi fields are variational fields of geodesic variations, convexity of $\mathfrak{C}$ implies the following: 
 
 \begin{thm}{Observation}
 %	Let $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$.
@@ -176,17 +168,14 @@ Consider the sequence of vectors $\vec{v}_i\z\in\T_{\gamma(t_i)}$ defined recurs
 
 Define $\iota_k\:\T_{\gamma(a)}\to \T_{\gamma(b)}$ by setting $\iota_k(\vec{i}_0)\df \vec{i}_k$.
 According to the observation, if $\vec{i}_0\in \K_{\gamma(a)}\mathfrak{C}$, then $\iota_k(\vec{i}_0)\in \K_{\gamma(b)}\mathfrak{C}$.
-Note that $\iota_k(\vec{i}_0)$ converges to the parallel translation of $\vec{i}_0$ along $\gamma$ as $k\to \infty${\color{red}, see \cite{Ber-Nik}}.
+Note that $\iota_k(\vec{i}_0)$ converges to the parallel translation of $\vec{i}_0$ along $\gamma$ as $k\to \infty$.
+%???на сколько я помню, \cite{Ber-Nik} используют аппроксимацию композицией центральных симметри --- расчёты там те же, но вот так сослаться не получится.
 Since $\K_{\gamma(b)}\mathfrak{C}$ is closed,
 the parallel translation along $\gamma$ maps $\K_{\gamma(a)}\mathfrak{C}$ in $\K_{\gamma(b)}\mathfrak{C}$.
 Switching the direction of $\gamma$, we get the opposite inclusion.
 That is, the tangent cone $\K_{\gamma(t)}\mathfrak{C}$ is parallel along $\gamma$ --- the main part is proved.
 
-{\color{red} We use the parallel translation along $\gamma$ to 
-%Let us use parallel translation along $\gamma$ to 
-identify the tangent spaces at 
-%the
- points} on $\gamma$.
+We use the parallel translation along $\gamma$ to identify the tangent spaces at points on $\gamma$.
 This way we will identify the tangent cones $\K_{\gamma(t)}\mathfrak{C}$ for all $t$;
 denote the obtained cone by $\K$.
 
@@ -515,33 +504,37 @@ In particular it is not a union of countably many disjoint simple curves --- a c
 
 Recall that according to the main proposition (\ref{prom:rank}), if a geodesic $\gamma$ of a generic Riemannian manifold $(M,g)$ runs in the boundary of convex set $\mathfrak{C}$, then any point on $\gamma$ has rank 1.
 
-It {\color{red} is worth   mentioning} the following 
-	closely  related result of Anatoliy Milka \cite[§~4]{milka} in the opposite direction; originally it was proved for Euclidean spaces, but the same proof works for Riemannian manifolds:
+It is worth mentioning the following closely  related result of Anatoliy Milka \cite[§~4]{milka} in the opposite direction; originally it was proved for Euclidean spaces, but the same proof works for Riemannian manifolds:
 
 \begin{thm}{Milka's theorem}
-Let $\mathfrak{C}$ be a closed convex set in an arbitrary Riemannian manifold $(M,g)$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ %equipped 
-{\color{red} with respect to the intrinsic metric of $\mathfrak {C}$}.
+Let $\mathfrak{C}$ be a closed convex set in an arbitrary Riemannian manifold $(M,g)$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ with respect to the intrinsic metric of $\mathfrak {C}$.
 Suppose that all points on $\gamma$ have rank at most 1 in $\mathfrak{C}$.
 Then $\gamma$ is a geodesic of the ambient space $(M,g)$.
 \end{thm}
 
-One can show that generic  \footnote{any? Are you sure about it?  IF  not maybe make a question out of it?}  Riemannian manifold contains convex closed sets with geodesics on its boundary.
-For example almost horizonal geodesics in a perturbed product metric on $\SS^2\times\RR$ run in a convex surfaces.
+It turns out that generic Riemannian manifold contains nontrivial geodesics that run in a convex hypersurface;
+for example nearly horizontal geodesic in the product $\mathbb{S}^2\times \RR$ with perturbed metric. 
+Moreover, it seems that the following statement holds true; maybe someone were to take on the burden of proving it formally:
+
+\begin{thm}{Stetement}
+Any Riemannian manifold $(M,g)$ contains a nontrivial geodesic  that runs in a convex hypersurface.
+\end{thm}
+
 
 \begin{thm}{Open question}
 Is it true that the set of geodesics on convex hypersurfaces in generic Riemannian manifolds is locally finite?
 \end{thm}
 
-There is a chance that presented argument{\color{red}, when properly extended to infinite-dimensional manifolds} might lead to a counterexample to the following well known conjecture: \footnote{I would cite here Gromov. I do not have Grmov's book ,
-	now. An exact citation appears in
-	 https://egg.epfl.ch/~nmonod/articles/rose.pdf, a paper which is also somewhat related in nature and is maybe worth mentioning}
+There is a chance that presented argument, when properly extended to infinite-dimensional manifolds might lead to a negative answer to the following question of Mikhael Gromov \cite[6.B\textsubscript{1}(f)]{gromov-1993}.
 
-
-
-\begin{thm}{Conjecture}
+\begin{thm}{Open question}
 Let $X$ be a complete length $\CAT(0)$ space (not necessary locally compact).
-Then any compact set lies in a compact convex subset of $X$.
+Is it true that any compact set of $X$ lies in a compact convex subset?
 \end{thm}
+
+(Let us mention that convex sets in $\CAT(0)$ space have peculiar propertise, for example there are compact convex sets without extreme points.
+That is, a  natural  analogue  of  the  Krein-–Milman  theorem fails in general $\CAT(0)$ spaces.
+Such an example was constructed by Nicolas Monod \cite{monod-2016}.)
 
 \begin{thm}{Open question}
 Let $\mathfrak{C}$ be the closure of a convex hull of a set $Q$ in a Riemannian manifold.
