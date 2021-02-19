@@ -4,6 +4,10 @@
 \usepackage{enumerate}
 \usepackage{epsfig,lpic,wrapfig}
 %\usepackage{fixltx2e}%provides \textsubscript
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{extarrows}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -154,3 +158,11 @@ english]{babel}
 \newenvironment{subthmN}[1]{\ifthenelse{\equal{#1}{}}
 {\par\refstepcounter{subthmN}\begin{itemize}\item[\arabic{subthmN})]}{\par\refstepcounter{subthmN}\label{#1}\setcounter{cloneN}{\value{subthmN}} \addtocounter{cloneN}{-1}\refstepcounter{cloneN}\label{SHORT.#1}\begin{itemize}
 \item [\arabic{subthmN})]}}{\end{itemize}}
+
+
+\makeatletter
+\newcommand\xhookrightarrow[2][]{%
+  \ext@arrow 9999{\longhookrightarrowfill@}{#1}{#2}}
+\newcommand\longhookrightarrowfill@{%
+  \arrowfill@\hook\relbar\rightarrow}
+\makeatother

@@ -24,10 +24,9 @@ For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, the
 Let $\mathfrak{C}$ be the convex hull of a subset $Q$ in a Euclidean space.
 By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
 that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
-This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.
-
-Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
-A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.
+This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.%
+\footnote{Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
+A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.}
 
 It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds.
 For instance, it is claimed by Mohammad Ghomi and Joel Spruck \cite[Lemma 9.1]{Ghomi}.
@@ -38,7 +37,8 @@ Further Riemannian metrics will be assumed to be $\mathcal C^\infty$-smooth.
 Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
 if the property $\mathcal P$ holds for a dense \emph{G-delta set} (that is, a countable intersection of open subsets) of metric tensors in the $\mathcal C^k$-topology.
 Since the space of Riemannian metrics  on $M$ is \emph{Baire}, with  respect to $\mathcal C^k$-topology, any 
-countable intersection of dense G-delta sets is dense.
+countable intersection of dense G-delta sets is dense;
+in particular we may say that \emph{most} of Riemannian metrics are generic.
 
 \begin{thm}{Main theorem}\label{thm:main}
 Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth manifold $M$.
@@ -66,8 +66,8 @@ According to the following corollary, the latter does not hold in most Riemannia
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
 Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth connected manifold $M$ with dimension at least 3.
-Suppose that the convex hull $\mathfrak{C}$ of a connected set $Q$ is compact.
-Then either $Q\supset \partial \mathfrak{C}$ or $Q$ is contained in a minimizing geodesic of $(M,g)$.
+Suppose that a connected closed set $Q$ has a convex hull $\mathfrak{C}$ that is compact.
+Then $Q\supset \partial \mathfrak{C}$.
 \end{thm}
 
 The proofs are built on the following proposition.
@@ -101,7 +101,7 @@ Recall that $\T_x=\T_xM$ denotes the \emph{tangent space} of $M$ at $x$.
 The \emph{tangent cone} $\K_x\mathfrak{C}\subset \T_x$ at $x\in\mathfrak{C}$ is defined as the closure of the set of all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
 
 Given $x\in \mathfrak{C}$, denote by $\L_x\mathfrak{C}$ the \emph{maximal linear subspace} of $\K_x\mathfrak{C}$.
-The \emph{rank} of $\mathfrak{C}$ at $x$ is defined as $\dim \L_x\mathfrak{C}$.
+The \emph{rank} of $\mathfrak{C}$ at $x$ is defined as the dimension of $\L_x\mathfrak{C}$.
 
 Note that $\K_x\mathfrak{C}$ is a convex cone in $\T_x$; in particular, $\L_x=\K_x\cap (-\K_x)$.
 Further $\K_x\mathfrak{C}$ coincides with 
@@ -145,7 +145,8 @@ By doing so we may assume that any pair of points of $(M,g)$ is connected by a u
 In particular, for any subinterval $[a,b]\subset (a_0,b_0)$ and any tangent vectors $\vec{v} \in \T_{\gamma (a)}$ and $\vec{w} \in \T_{\gamma (b)}$ there exists unique Jacobi field $\vec{i}$ along $\gamma$ 
 such that $\vec{i}(a)=\vec{v}$ and $\vec{i}(b)=\vec{w}$.
 
-Since Jacobi fields are variational fields of geodesic variations, convexity of $\mathfrak{C}$ implies the following: 
+Since Jacobi fields are variational fields of geodesic variations, 
+the convexity of $\mathfrak{C}$ implies the following: 
 
 \begin{thm}{Observation}
 %	Let $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$.
@@ -160,11 +161,11 @@ then $\vec{i}(t)\in \K_{\gamma(t)}\mathfrak{C}$.
 \end{thm}%???Это наблюдение стало менее общим, из-за этого его (возможно) будет тяжелее понимать???
 
 Choose a subinterval $[a,b] \subset (a_0,b_0)$.
-Given a large positive integer $k$, consider  {\color{red}  the } arithmetic progression
+Given a large positive integer $k$, consider the arithmetic progression
 $t_0,\dots,t_{k+1}$ such that $t_0=a$ and $t_k=b$.
 
 Choose a tangent vector $\vec{v}_0\in\T_{\gamma(a)}$.
-Consider the sequence of vectors $\vec{v}_i\z\in\T_{\gamma(t_i)}$ defined recursively by $\vec{v}_{i+1}=2\cdot \vec{i}_i(t_{i+1})$, where $t\mapsto \vec{i}_i(t)$ is the Jacobi field along $\gamma$ such that $\vec{i}_i(t_i)=\vec{v}_i$ and $\vec{i}_i(t_{i+2})=0$.
+Consider the sequence of vectors $\vec{v}_i\z\in\T_{\gamma(t_i)}$ defined recursively by $\vec{v}_{i+1}=2\cdot \vec{i}_i(t_{i+1})$, where $t\mapsto \vec{i}_i(t)$ denotes the Jacobi field along $\gamma$ such that $\vec{i}_i(t_i)=\vec{v}_i$ and $\vec{i}_i(t_{i+2})=0$.
 
 Define $\iota_k\:\T_{\gamma(a)}\to \T_{\gamma(b)}$ by setting $\iota_k(\vec{i}_0)\df \vec{i}_k$.
 According to the observation, if $\vec{i}_0\in \K_{\gamma(a)}\mathfrak{C}$, then $\iota_k(\vec{i}_0)\in \K_{\gamma(b)}\mathfrak{C}$.
@@ -175,8 +176,8 @@ the parallel translation along $\gamma$ maps $\K_{\gamma(a)}\mathfrak{C}$ in $\K
 Switching the direction of $\gamma$, we get the opposite inclusion.
 That is, the tangent cone $\K_{\gamma(t)}\mathfrak{C}$ is parallel along $\gamma$ --- the main part is proved.
 
-We use the parallel translation along $\gamma$ to identify the tangent spaces at points on $\gamma$.
-This way we will identify the tangent cones $\K_{\gamma(t)}\mathfrak{C}$ for all $t$;
+Let us the parallel translation along $\gamma$ to identify the tangent spaces at points on $\gamma$.
+This way we identify the tangent cones $\K_{\gamma(t)}\mathfrak{C}$ for all $t$;
 denote the obtained cone by $\K$.
 
 For $\vec{v}\in \K$ and small $\epsilon>0$, consider the unique Jacobi field $\vec{i}_\epsilon$ along $\gamma$ with $\vec{i}_\epsilon (a+\eps)\z=\vec{i} _\epsilon(a-\eps)=\vec{v}$.
@@ -192,177 +193,131 @@ Finally note that
 \quad\iff\quad 
 \K_\vec{v}\K=\K.
 \]
-Therefore, if $\vec{v}\in \L_{\gamma(a)}\mathfrak{C}$, then $\pm R(\gamma'(a))\cdot \vec{v}\in \K$ and hence $R(\gamma'(a))\cdot \vec{v}\in \L_{\gamma(a)}\mathfrak{C}$.
+Therefore, if $\vec{v}\in \L_{\gamma(a)}\mathfrak{C}$, then $\pm R(\gamma'(a))\cdot \vec{v}\in \K$, and hence $R(\gamma'(a))\cdot \vec{v}\in \L_{\gamma(a)}\mathfrak{C}$.
 That is, $\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R(\gamma'(a))$ --- part \ref{SHORT.lem:key:b} is proved.
 \qeds
 
-\section{Taylor expansion of metric tensor}\label{sec:jet}
-
-In following lemma makes possible to calculate the Taylor expansion of metric tensor in the normal coordinates in terms of curvature tensor and its covariant derivatives.
-This formula was derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger} (that is the earliest reference we have found).
-We present calculations since some notations will be used in the proof of \ref{prop:submersion}.
-
-Let $(M,g)$ be a Riemannian manifold.
-Recall that $\Rm$ denotes the curvature tensor.
-
-Choose a tangent vector $\vec{x}_p\in \T_pM$; 
-extend it to a parallel vector field $\vec{x}$ in the normal coordinates at $p$.
-That is, set 
-\[\vec{x}_{\exp_p\vec{w}}=(d_\vec{w}\exp_p)\vec{x}_p\] for all small $\vec{w}\in \T_p$.
-Note that $(\nabla^k_\vec{x} \vec{x})_p=0$ for any $k\ge 1$.
-
-Given a tensor field $S$, let us use the shortcut $S'$ for $\nabla_\vec{x}S$ at $p$.
-Recall that $R=R(\vec{x})$ denotes the Jacobi operator of $\vec{x}$.
-The \emph{higher Jacobi operators} $R^{(k)}$ are defined by
-\[R^{(k)}=R^{(k)}(\vec{x})\df\nabla^k_\vec{x}R(\vec{x}).\]
-Note that 
-\begin{itemize}
-\item $R^{(k)}(\vec{x})\:\T_p\to\T_p$ is a self-adjoint operator, 
-\item $\vec{x}\perp R^{(k)}(\vec{x})\cdot \vec{v}$ for any vector field $\vec{v}$, and
-\item $\vec{x}\mapsto R^{(k)}(\vec{x})$ is a homogenius polynomial of degree $k+2$ defined for all $\vec{x}\in \T_p$.
-\end{itemize}
 
 
+\section{Normalization of metrics}
 
+Choose a Euclidean space $\T$.
+Consider the space $\mathcal{G}$ of germs of Riemannian metrics on $\T$ at the origin that coincide with the canonical metric at the origin.
+Any germ in $\mathcal{G}$ can described as $\langle G\cdot \vec x,\vec y\rangle$ for a field $G$ of positive self-adjoint operators on $\T$ defined in a neighborhood of the origin such that $G(0)=\id$.
 
-\begin{thm}{Lemma}\label{lem:jacobi}
-For any tangent vector $\vec{x}$ at a point $p$ of a Riemannian manifold manifold $(M,g)$ and any integer $n$ there are three self-adjoint operators 
-\[A_n=A_n(\vec{x}),\ B_n=B_n(\vec{x}),\ C_n=C_n(\vec{x})\:\T_p\to \T_p\]
-that satisfy the following conditions:
+Recall that $k$-jet of $G$ can be thought of as the Taylor polynomilal of $G$ of degree $k$, that is
+\[G(\vec{x})=\id + G_1(\vec x)+\dots+G_k(\vec x) + o(|\vec x|^k),
+\eqlbl{eq:k-jet}\]
+where $G_i$ is a homogeneous polynomial of degreee $i$ defined on $\T$ with values in the self-adjoint operators on $\T$.
+Note that every such array of polynomials $G_1,\dots, G_k$ can appear in \ref{eq:k-jet}.
+It follows since the germ defined by 
+\[G(\vec{x})=\id + G_1(\vec x)+\dots+G_k(\vec x)\eqlbl{eq:k-jet+}\]
+is in $\mathcal{G}$.
+The space of $k$-jets of germs in $\mathcal{G}$ at the origin will be denoted by~$\mathcal{G}^k$.
 
-\begin{subthm}{lem:jacobi:ABC}
-For any Jacobi field $\vec{i}$ along the geodesic $\gamma\:t\mapsto \exp_p(t\cdot \vec{x})$ the following identity holds:
-\[\langle \vec{i},\vec{i}\rangle^{(n)}
-=
-\langle A_n\cdot \vec{i},\vec{i}\rangle+ \langle B_n\cdot \vec{i}, \vec{i}'\rangle+\langle C_n\cdot \vec{i}', \vec{i}'\rangle.\]
-\end{subthm}
+The higher Jacobi opertators $R_k$ are homogeneous polynomials of degree $k$ on $\T$ with values in the self-adjoint operators on $\T$;
+it is defined by
+\[R_k(\vec x)\cdot \vec v=(\nabla^{k-2}_{\vec x}\Rm)(\vec v,\vec x)\cdot\vec x;\]
+we assume that $R_1=0$.
+Recall that $R_i(\vec x)\cdot \vec x=0$ for any $\vec x$;
+the space of such arrays $(R_1,\dots,R_k)$ will be denoted by $\mathcal{R}^k$.
 
-\begin{subthm}{lem:jacobi:R}
-$\vec{x}\mapsto A_{n}(\vec{x})$, $\vec{x}\mapsto B_{n+1}(\vec{x})$ and $\vec{x}\mapsto C_{n+2}(\vec{x})$ are homogeneous polynomials of degree $n$ defined for all $\vec{x}\in \T_p$.
-\end{subthm}
+The formulas for curvature tensor define a natural algebraic map 
+\[\rho_k\:\mathcal{G}^k\to \mathcal{R}^k.\]
 
-\begin{subthm}{lem:jacobi:A-R}
-The following differences 
-\[A_{n+2}-2\cdot R^{(n)},
-\quad 
-B_{n+3}-4\cdot(n+2)\cdot R^{(n)},
-\quad
-C_{n+4}-2\cdot(n+1)\cdot(n+4)\cdot R^{(n)}\]
-depend only on $R,R',\dots, R^{(n-2)}$.
-\end{subthm}
-
-
+\begin{thm}{Proposition}
+The map $\rho_k$ is an algebraic submersion.
 \end{thm}
 
-\parit{Proof.}
-Applying recursively the Jacobi identity $\vec{i}''=-R\cdot \vec{i}$ for the geodesic $\gamma\:t\mapsto\exp_p(t\cdot \vec{x})$, we get that the following identity 
-\[\langle \vec{i},\vec{i}\rangle^{(n)}
-=
-\langle A_n\cdot \vec{i},\vec{i}\rangle+ \langle B_n\cdot \vec{i},\vec{i}'\rangle+\langle C_n\cdot \vec{i}',\vec{i}'\rangle\]
-where $A_0=1$, $B_0=0$, $C_0=0$, and the operators $A_n$, $B_n$, and $C_n$ satisfy the following recursive relations:
-\begin{align*}
-A_{n+1}&=A_n'-\tfrac12\cdot R\cdot B_n-\tfrac12\cdot B_n\cdot R
-\\
-B_{n+1}&=B_n'+ 2\cdot A_n-C_n\cdot R-R\cdot C_n
-\\
-C_{n+1}&=C_n'+ B_n
-\end{align*}
+Before going into the proof we recall results about metric tensor in the normal coordinates.
 
-It proves part \ref{SHORT.lem:jacobi:ABC};
-by looking at the table, and applying induction, one gets~\ref{SHORT.lem:jacobi:R} and~\ref{SHORT.lem:jacobi:A-R}.\qeds
+A germ in $\mathcal{G}$ will be called \emph{normal} if the standard coordinates on $\T$ coinside with normal coordinates of the germ in a neigborhood of the origin.
+By the Gauss lemma, a germ of $G$ is normal if and only if 
+\[G(\vec{x})\cdot \vec{x}=\vec{x}\eqlbl{eq:Gauss}\]
+for all small $\vec{x}\in \T$.
+The subspace of normal germs in $\mathcal{G}$ and their $k$-jets will be denoted by $\mathcal{N}$ and $\mathcal{N}^k$ respectively.
 
-\renewcommand{\arraystretch}{1.5}
-\begin{figure}[!ht]
-\centering
-\begin{tabular}{ l|c|c|c }
-$n$ & $A$ & $B$ & $C$ \\ \hline
-0& $1$ & $0$ & $0$ \\ \hline
-1& $0$ & $2$ & $0$ \\ \hline 
-2& $-2\cdot R$ & $0$ & $2$ \\ \hline 
-3& $-2\cdot R'$ & $-8\cdot R$ & 0 \\ \hline 
-4& $-2\cdot R''+8\cdot R^2$ & $-12\cdot R'$ & $-8\cdot R$ \\ \hline
-5& $-2\cdot R^{(3)}+\dots$ 
-& $-16\cdot R''+16\cdot R^2$ & $-20\cdot R'$ \\ \hline
-6
-&$-2\cdot R^{(4)}+\dots$
-&$-20\cdot R^{(3)}+\dots$
-&$-36\cdot R''+16\cdot R^2$
-\\
-\end{tabular}
-\end{figure} 
+Suppose that a normal $k$-jet is described by polynomials $G_1,\dots, G_k$ as in \ref{eq:k-jet}.
+(In this case $G_1=0$, but it will not be important.)
+Note that \ref{eq:Gauss} implies that
+\[G_i(\vec{x})\cdot\vec{x}=0
+\eqlbl{eq:Gaussi}\] 
+for each $i$.
+Moreover, for an array of polynomials $G_1,\dots,G_k$  such that $G_i$ is homogeneous of degree $i$ and \ref{eq:Gaussi} holds for each $i$, the sum \ref{eq:k-jet+} defines a normal $k$-jet;
+that is, \ref{eq:Gaussi} is the only condition on the  normal $k$-jets.
 
-Following \cite{eliashberg-mishachev}, we will denote by $J^n_g(p)$ the $n$-jet of a metric tensor $g$ at the point $p$;
-it cares information on all partial derivatives of $g$ at $p$ up to order~$n$ in some (and therefore every) local coordinate system at $p$.
-Equivalently, the jet $J^n_g(p)$ can be described by Taylor expansion up to degree $n$ of $g$ at $p$ (in some, and therefore every, local coordinate system at $p$).
-Let us denote by $\mathcal{J}^n(p)$ the space of all $n$-jet of a Riemannian metric tensors at the point $p$
+The polynomials $G_1,\dots,G_k$ of a normal $k$-jet $G$ can be written as an algebraic expression in terms of $R_1,\dots,R_k$;
+moreover for each $k$ we have 
+\[G_k=a_k\cdot R_k + A_k,\eqlbl{eq:a+A}\]
+where $a_k$ is a nonzero constant and $A_k$ is an algebraic expression in terms of $R_1,\dots R_{k-2}$.
+This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.
 
-Assume $g$ is positive definite at $p$.
-Note that $J^n_g(p)$ determines the polynomial functions 
-\[\vec{x}\mapsto R(\vec{x}),
-\quad \vec{x}\mapsto R'(\vec{x}),\quad\dots,\quad \vec{x}\mapsto R^{(n-2)}(\vec{x})\eqlbl{eq:R_(n-2)}\] 
-defined for all $\vec{x}\in \T_p$.
-In other words, the map 
-\[\rho_n\:J^n_g(p)\mapsto (R,\dots,R^{(n-2)})\]
-is defined.
+Note that \ref{eq:a+A} implies the following:
 
-The image of $\rho_n$; that is,
-the space of all possible polynomials in \ref{eq:R_(n-2)} will be denoted by $\mathcal{R}^{n-2}(p)$.
-By \cite[Theorem 1.1]{kowalski-belger}, the space $\mathcal{R}^{n-2}$ is a linear with respect to standard addition and multiplication by a scalar.
-
-\begin{thm}{Proposition}\label{prop:submersion}
-For any jet $J^n_g(p)\z\in \mathcal{J}^n(p)$ the differential $d_{J^n_g(p)}\rho_n$ has a right inverse $s$.
-Moreover $s$ can be chosen so that the jets in its image correspond to metric tensors that share the normal coordinates with $g$.
-
-In particular, the map $\rho_n\:\mathcal{J}^n(p)\to \mathcal{R}^{n-2}(p)$ is a submersion.
+\begin{thm}{Claim}\label{clm:diff}
+The map $\rho_k$ defines an algebraic diffeomorphism $\mathcal{N}^k\leftrightarrow\mathcal{R}^k$.
 \end{thm}
 
+
+\begin{wrapfigure}{r}{32 mm}
+\vskip-0mm
+\begin{tikzpicture}[scale=2]
+  \node (1) at (0,1) {$\mathcal{G}$};
+  \node (2) at (1,1){$\mathcal{N}$};
+  \node (11) at (0,0){$\mathcal{G}^k$};
+  \node (12) at (1,0) {$\mathcal{N}^k$};
+    \node (21) at (.5,-5/6) {$\mathcal{R}^k$};
+\draw[
+    >=latex,
+%   every node/.style={above,midway},% either
+    auto=right,                      % or
+    loop above/.style={out=75,in=105,loop},
+    every loop,
+    ]
+   (1) edge[bend left] node [swap] {$\nu$}  (2)
+   (2) edge[bend left, left hook-stealth] node {$\iota$} (1)
+   (1) edge (11)
+   (2) edge (12)
+   (11) edge[bend right] node  {$\rho_k$} (21)
+   (11) edge [bend left] node [swap] {$\nu_k$} (12)
+   (12) edge[bend left, left hook-stealth] node {$\iota_k$} (11)
+   (21) edge[<->][bend right] node  {$\rho_k$} (12);
+\end{tikzpicture}
+\label{diagram-page}
+\end{wrapfigure}
+
 \parit{Proof.}
-Choose a Riemannian metric $g$ in a neighborhood of $p$.
-Let $C_i=C_i(\vec{x})$ be as in \ref{lem:jacobi}.
+Any germ becomes normal if the space $\T$ is reparametrized by its exponential map.
+It defines the normalization map 
+$\mathcal{G}\xrightarrow{\nu} \mathcal{N}$.
 
-Choose a vector filed $\vec{v}$ that is parallel in the normal coordinates at~$p$;
-that is, $\vec{v}_{\exp_p\vec{w}}=(d_\vec{w}\exp_p)\vec{v}_p$ for some $\vec{v}_p\in\T_p$ and all small $\vec{w}\in \T_p$.
+The maps $\mathcal{G}^k\xrightarrow{\rho_k}\mathcal{R}^k\z{\xleftrightarrow{\rho_k}}\mathcal{N}^k$ together with the forgetful maps $\mathcal{G}\to\mathcal{G}^k$ and $\mathcal{N}\to\mathcal{N}^k$  commute.
+In particular we get a map $\mathcal{G}^k\xrightarrow{\nu_k}\mathcal{N}^k$ that commutes with the forgetful maps and the noramilzation $\nu$.
 
-Set $\vec{v}(t)=\vec{v}_{\exp_p(t\cdot \vec{x})}$ and $\vec{i}(t)=t\cdot \vec{v}(t)$.
-Note that $\vec{i}$ is a Jacobi field along the geodesic $t\mapsto \exp_p(t\cdot \vec{x})$.
-Observe that 
-\[t^2\cdot \langle \vec{v}(t),
-\vec{v}(t)\rangle=\langle \vec{i}(t), \vec{i}(t)\rangle,
-\quad 
-\vec{i}(0)=0,
-\quad 
-\text{and} \quad 
-\vec{i}'(0)\z=\vec{v}_p.\]
-Applying \ref{lem:jacobi}, we get
-\[\langle\vec{i}(t), \vec{i}(t)\rangle=\sum_{i=0}^{n+2}\tfrac1{(n+2)!}\cdot\langle C_n(\vec{x})\cdot \vec{v}_p,\vec{v}_p\rangle\cdot t^{n+2}+o(t^{n+2}).\]
-Applying the last identity for vector $\vec{x}/|\vec{x}|$ and $t=|\vec{x}|$, we get the equality
-\[\langle\vec{v}, \vec{v}\rangle=\sum_{i=2}^{n+2}\tfrac1{(n+2)!}\cdot\langle C_n(\vec{x})\cdot \vec{v}_p,\vec{v}_p\rangle+o(|\vec{x}|^{n})\]
-at the point $\exp_p \vec{x}$.
-It follows that in the normal coordinates at $p$,
-the $n$-jet $J^n_g(p)$ is uniquely described by the polynomial functions
-\[\vec{x}\mapsto C_2(\vec{x}),
-\ \dots\ ,\ 
-\vec{x}\mapsto C_{n+2}(\vec{x}).\]
+Note that the inclusion map $\mathcal{N}\stackrel{\iota}{\hookrightarrow} \mathcal{G}$ is a right inverse of $\nu$.
+Moreover by changing the parametrization on $\T$ to normal coordinates of a given germ $G$ in $\mathcal{G}$, we may assume that $G$ lies in the image of $\iota$.
+Therefore there is a map $\mathcal{N}^k\stackrel{\iota_k}{\hookrightarrow} \mathcal{G}^k$ that is right inverse of $\nu$ such that its image contains any given jet $\mathcal{G}^k$.
+Whence $\mathcal{G}^k\xrightarrow{\nu^k} \mathcal{N}^k$ is an algebraic submersion.
 
-It remains to apply \ref{lem:jacobi:A-R} inductively on $n$.
-\qeds 
+By \ref{clm:diff}, $\mathcal{N}^k\xleftrightarrow{\rho_k}\mathcal{R}^k$ is an agebraic diffeomorphism, hence the result.
+\qeds
+
 
 \section{Genericity }
 
+Let $M$ be a smooth $m$-dimensional manifold with a Riemannian metric $g$.
+
 Recall that $R^{(k)}(\vec{x})\cdot \vec{x}=0$
 for any $k$ and $\vec{x}\in \T_p$.
-Therefore the orthogonal complement $\vec{x}^{\perp}$ of $\vec{x}$ as well as the subspace spanned by $\vec{x}$ are invariant subspace of $R^{(k)}(\vec{x})$ for any $k$.
-
-Therefore for any integer $k\ge 0$,
-the operator $R^{(k)}(\vec{x})$ has 4 \emph{trivial} invariant subspaces of dimension $0$, $1$ (the subspace spanned by $\vec{x}$), $n-1$ (the orthogonal complement to $\vec{x}$) and $m=\dim M$;
-the remaining invariant subspaces will be regarded as \emph{nontrivial}.
+It follows that the the subspace spanned by $\vec{x}$ is invariant subspace of $R^{(k)}(\vec{x})$ for any $k$.
+An invariant subspace that contains $\vec{x}$ of dimension at between $2$ and $m-1$ will be regarded as \emph{nontrivial}.
 
 Suppose a nonconstant geodesic $\gamma$ in a Riemannian manifold has a parallel family of subspace $V_t \subset \T_{\gamma (t)}$ that are nontrivial invariant subspaces of $R(\gamma'(t))$ for any $t$.
 In this case we say briefly that $\gamma$ admits an \emph{invariant family of subspaces}.
 
 Let $M$ be an $m$-dimensional smooth manifold.
 Choose a compact subset $K\subset M$ and $\eps>0$.
-Consider the set $G(K,\eps)$ of all Riemannian metrics $g$ on $M$ such that there exists a geodesic $\gamma$ in $(M,g)$ that starts in $K$, has length $\eps$, and admits an invariant family of subspaces.
+Consider the set $G(K,\eps)$ of all Riemannian metrics $g$ on $M$ such that there exists a geodesic $\gamma$ in $(M,g)$ such that (1) $\gamma$ starts in $K$, (2)  $\length\gamma=\eps$, and (3) $\gamma$ admits an invariant family of subspaces.
 
 Since the geodesics and the curvature tensor depend continuously on the Riemannian metric in $\mathcal C^2$-topology, we get that 
 
@@ -386,11 +341,13 @@ $G^k(K)\z\supset G(K,\eps)$ for any integer $k\ge 0$, compact set $K\subset M$, 
 
 
 \begin{thm}{Proposition}\label{prop:G}
-Let $M$ be a smooth manifold of dimension $m\ge3$.
+Let $M$ be a smooth $m$-dimensional manifold.
 Then, for any $k\geq 6$, the set $G^k(K)$ is nowhere dense in the space of all Riemannian metrics.
 \end{thm}
 
 \parit{Proof.}
+We may assume that $m\ge3$; otherwise there are no nontrivial subspaces. 
+
 Choose nonzero $\vec{x}\in \T_p$.
 Note that $k$-tuples $(R(\vec{x}),...,R^{(k)}(\vec{x}))$ that have a common nontrivial invariant subspace is an algebraic subset of~$\mathcal{R}^k(p)$.
 Observe that the codimension of this subset is $(m-2)\z\cdot (k-1)$ in $\mathcal{R}^k(p)$.
