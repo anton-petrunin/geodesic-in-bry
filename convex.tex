@@ -16,8 +16,8 @@ pdfauthor={Alexander Lytchak and Anton Petrunin}
 
 \begin{abstract}
 We give a necessary condition on a geodesic in a Riemannian manifold that can run in some convex hypersurface.
-As a corollary we obtain peculiar properties of \emph{all} convex sets that hold true in any \emph{generic} Riemannian manifold $(M,g)$.
-For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, then it is strictly convex.
+As a corollary we obtain peculiar properties of \emph{all} convex sets that hold true in any \emph{generic} Riemannian manifold $(M,\bm{g})$.
+For example, if a convex set in $(M,\bm{g})$ is bounded by a smooth hypersurface, then it is strictly convex.
 \end{abstract}
 
 \section{Introduction}
@@ -25,7 +25,7 @@ Let $\mathfrak{C}$ be the convex hull of a subset $Q$ in a Euclidean space.
 By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
 that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
 This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.%
-\footnote{Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
+\footnote{Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,\bm{g})$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
 A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.}
 
 It seems to be a folklore belief that a version of this statement should hold true in all Riemannian manifolds.
@@ -34,15 +34,15 @@ In the present note we prove that the somewhat counter-intuitive opposite is the
 It agrees with the pattern: \emph{a typical object in your favorite theory looks like nothing you have ever seen before}.
 
 Further Riemannian metrics will be assumed to be $\mathcal C^\infty$-smooth.
-Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
+Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $\bm{g}$ on a manifold $M$ 
 if the property $\mathcal P$ holds for a dense \emph{G-delta set} (that is, a countable intersection of open subsets) of metric tensors in the $\mathcal C^k$-topology.
 Since the space of Riemannian metrics  on $M$ is \emph{Baire}, with  respect to $\mathcal C^k$-topology, any 
 countable intersection of dense G-delta sets is dense;
 in particular we may say that \emph{most} of Riemannian metrics are generic.
 
 \begin{thm}{Main theorem}\label{thm:main}
-Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth manifold $M$.
-Then any closed convex set $\mathfrak{C}\subset (M,g)$ that is not a subset of a geodesic
+Let $\bm{g}$ be a $\mathcal C^2$-generic Riemannian metric on a smooth manifold $M$.
+Then any closed convex set $\mathfrak{C}\subset (M,\bm{g})$ that is not a subset of a geodesic
 satisfies the following properties:
 
 \begin{subthm}{thm:main:interior}
@@ -50,7 +50,7 @@ The set $\mathfrak{C}$ has nonempty interior.
 \end{subthm}
 
 \begin{subthm}{thm:main:geodesics}
-The set of all non-extreme points $\partial\mathfrak{C}$ is a countable union of disjoint geodesics in $(M,g)$.
+The set of all non-extreme points $\partial\mathfrak{C}$ is a countable union of disjoint geodesics in $(M,\bm{g})$.
 In particular, if $\dim M\ge 3$, then the set of
 extreme points of $\mathfrak{C}$ is dense in~$\partial\mathfrak{C}$.
 \end{subthm}
@@ -61,12 +61,13 @@ Part \ref{SHORT.thm:main:interior} for $\dim M\ge 4$ is proved by Thomas Murphy 
 for $\dim M=3$ the proof was sketched by Robert Bryant \cite{Bryant}.
 
 Recall that the convex hull of a set $Q$ is defined as the minimal convex set (with respect to inclusion) that contains $Q$.
-According to Carathéodory's theorem, the convex hull of  any compact set of a Euclidean space (or sphere of the Lobachevsky space) is compact.
+According to Carathéodory's theorem, the convex hull of  any compact set of a Euclidean space (as well as sphere or the Lobachevsky space) is compact.
 According to the following corollary, the latter does not hold in most Riemannian manifolds.
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
-Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth connected manifold $M$ with dimension at least 3.
-Suppose that a connected closed set $Q$ has a convex hull $\mathfrak{C}$ that is compact.
+Let $Q$ be a connected closed set in a $\mathcal C^2$-generic Riemannian manifold $(M,\bm{g})$.
+Assume that dimension of $M$ is at least $3$ and $Q$ does not lie in a geodesic.
+Suppose that  $Q$ has a convex hull $\mathfrak{C}$ that is compact.
 Then $Q\supset \partial \mathfrak{C}$.
 \end{thm}
 
@@ -74,8 +75,8 @@ The proofs are built on the following proposition.
 Its formulation use the notion of \emph{rank} of convex set at a point which is defined as the dimension of maximal linear subspace in the tangent cone to the convex set at the point.
 
 \begin{thm}{Main proposition}\label{prom:rank}
-Let $g$ be a $\mathcal C^2$-generic Riemannian metric on a smooth $m$-dimensional manifold $M$.
-Suppose $\mathfrak{C}$ is a closed convex set in $(M,g)$.
+Let $\bm{g}$ be a $\mathcal C^2$-generic Riemannian metric on a smooth $m$-dimensional manifold $M$.
+Suppose $\mathfrak{C}$ is a closed convex set in $(M,\bm{g})$.
 Then all non-extreme points of $\mathfrak{C}$ have rank either $1$ or $m$.
 
 In particular, if $\dim M\ge 3$ and $\mathfrak{C}$ is bounded by a $\mathcal{C}^1$-smooth hypersurface, then $\mathfrak{C}$ is \emph{strictly convex};
@@ -90,13 +91,13 @@ it describes a necessary condition on a geodesic in a Riemannian manifold that s
 in some convex, possibly non-smooth, hypersurface.
 If the geodesic contains a point of rank at least 2, then this condition implies a non-trivial
 statement on the curvature tensor of the manifold.
-The remaining part is slightly technical but straightforward: we show that the curvature tensor of a generic Riemannian manifold does not meet this property; this is done by applying the Thom transversality theorem.
+We show that the curvature tensor of a generic Riemannian manifold does not meet this property.
+This part is slightly technical but straightforward; it is done by applying the Thom transversality theorem.
 
 
-\section{Key lemma}
+\section{Key lemma}\label{sec:key}
 
-
-Let $\mathfrak{C}$ be a closed convex set in an $m$-dimensional Riemannian manifold $(M,g)$.
+Let $\mathfrak{C}$ be a closed convex set in an $m$-dimensional Riemannian manifold $(M,\bm{g})$.
 Recall that $\T_x=\T_xM$ denotes the \emph{tangent space} of $M$ at $x$.
 The \emph{tangent cone} $\K_x\mathfrak{C}\subset \T_x$ at $x\in\mathfrak{C}$ is defined as the closure of the set of all velocity vectors of geodesics that start at $x$ and run in $\mathfrak{C}$.
 
@@ -110,26 +111,28 @@ $x$ lies in the interior of $\mathfrak{C}$.
 In other words, $x$ has rank $m$ if and only if $x$ lies in the interior of $\mathfrak{C}$.%???REF, see, for instance, \cite{}.
 
 
-Given a tangent vector $\vec{x}\in\T_pM$, consider the so called \emph{Jacobi operator}
-\[R(\vec{x})\:\vec{v}\mapsto \Rm(\vec{v},\vec{x})\vec{x},\]
-where $\Rm$ denotes the curvature tensor of $g$.
-Note that $R(\vec{x})\:\T_p\to \T_p$ is a self-adjoint operator.
+Given a tangent vector $\vec{x}\in\T_pM$, consider the  \emph{Jacobi operators} of order $k$
+\[R^k_{\vec{x}}\:\vec{v}\mapsto \nabla^{k-2}_{\vec x}\Rm(\vec{v},\vec{x})\vec{x},\]
+where $\Rm$ denotes the curvature tensor of $\bm{g}$;
+we assume that $R^1=0$.
+Note that $R^k_{\vec{x}}\:\T_p\to \T_p$ is a self-adjoint operator and $\vec{x}\mapsto R^k_{\vec{x}}$ is a homogenius polynomial of degree $k$.
+
 The Jacobi equation along a geodesic $\gamma$ takes form 
-\[\vec{i}''+R(\gamma')\cdot \vec{i}=0,\]
+\[\vec{i}''+R^2_{\gamma'}\cdot \vec{i}=0,\]
 here $\vec{i}''$ is a shortcut for $\nabla^2_{\gamma'}\vec{i}$.
 
 \begin{thm}{Key lemma}\label{lem:key}
-Let $(M,g)$ be a Riemannian manifold and $\gamma\:(a_0,b_0)\to M$ be a geodesic that runs in a closed convex set $\mathfrak{C}\subset (M,g)$.
+Let $(M,\bm{g})$ be a Riemannian manifold and $\gamma\:(a_0,b_0)\to M$ be a geodesic that runs in a closed convex set $\mathfrak{C}\subset (M,\bm{g})$.
 Then the tangent cone of $\mathfrak{C}$ is parallel along $\gamma$; that is, the parallel translation along $\gamma$ defines a bijection between the tangent cones $\K_{\gamma(a)}\mathfrak{C}$ and $\K_{\gamma(b)}\mathfrak{C}$ for any $a,b \in (a_0,b_0)$.
 
 Moreover, for any $a\in (a_0,b_0)$ the following hold:
 \begin{subthm}{lem:key:a}
 For any $\vec{v}\in \K_{\gamma(a)}\mathfrak{C}$ we have
-\[R(\gamma'(a))\cdot \vec{v}\in \K_\vec{v}[\K_{\gamma(a)}\mathfrak{C}].\]
+\[R^2_{\gamma'(a)}\cdot \vec{v}\in \K_\vec{v}[\K_{\gamma(a)}\mathfrak{C}].\]
 \end{subthm}
 
 \begin{subthm}{lem:key:b} 
-$\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R(\gamma'(a))$.
+$\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R^2_{\gamma'(a)}$ for every $k$.
 \end{subthm}
 
 \end{thm}
@@ -140,8 +143,8 @@ In fact the main part of the key lemma follows from
 \cite{Petruninpar}.
 
 \parit{Proof of \ref{lem:key}.} 
-Since all statements are local, we may replace $(M,g)$ by its small open convex subset.
-By doing so we may assume that any pair of points of $(M,g)$ is connected by a unique geodesic and there are no conjugate points.
+Since all statements are local, we may replace $(M,\bm{g})$ by its small open convex subset.
+By doing so we may assume that any pair of points of $(M,\bm{g})$ is connected by a unique geodesic and there are no conjugate points.
 In particular, for any subinterval $[a,b]\subset (a_0,b_0)$ and any tangent vectors $\vec{v} \in \T_{\gamma (a)}$ and $\vec{w} \in \T_{\gamma (b)}$ there exists unique Jacobi field $\vec{i}$ along $\gamma$ 
 such that $\vec{i}(a)=\vec{v}$ and $\vec{i}(b)=\vec{w}$.
 
@@ -149,11 +152,11 @@ Since Jacobi fields are variational fields of geodesic variations,
 the convexity of $\mathfrak{C}$ implies the following: 
 
 \begin{thm}{Observation}
-%	Let $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,g)$.
+%	Let $\mathfrak{C}$ be a closed convex subset in a Riemannian manifold $(M,\bm{g})$.
 Suppose $\vec{i}$ is a Jacobi field along % a geodesic
 $\gamma$ and $a_0<a<t<b<b_0$.
 If 
-% \:[a,b]\to \mathfrak{C}$ in $(M,g)$.
+% \:[a,b]\to \mathfrak{C}$ in $(M,\bm{g})$.
 %Assume that
 $\vec{i}(a)\in \K_{\gamma(a)}\mathfrak{C}$ and $\vec{i}(b)\in \K_{\gamma(b)}\mathfrak{C}$
 then $\vec{i}(t)\in \K_{\gamma(t)}\mathfrak{C}$.
@@ -182,9 +185,9 @@ denote the obtained cone by $\K$.
 
 For $\vec{v}\in \K$ and small $\epsilon>0$, consider the unique Jacobi field $\vec{i}_\epsilon$ along $\gamma$ with $\vec{i}_\epsilon (a+\eps)\z=\vec{i} _\epsilon(a-\eps)=\vec{v}$.
 Due to the Jacobi equation,
-\[\vec{i}_\epsilon (a)=\vec{v} +\eps^2\cdot R(\gamma'(a))\cdot \vec{v} +o(\eps^2).\]
+\[\vec{i}_\epsilon (a)=\vec{v} +\eps^2\cdot R^2_{\gamma'(a)}\cdot \vec{v} +o(\eps^2).\]
 According to the observation, $\vec{i}_\epsilon(a)\in \K$ for any $\eps>0$.
-Since $\K$ is a closed convex cone, we get $R(\gamma')\cdot \vec{v}\z\in \K_\vec{v}\K$ --- part \ref{SHORT.lem:key:a} is proved.
+Since $\K$ is a closed convex cone, we get $R^2_{\gamma'}\cdot \vec{v}\z\in \K_\vec{v}\K$ --- part \ref{SHORT.lem:key:a} is proved.
 
 Finally note that 
 \[\vec{v}\in \L_{\gamma(a)}\mathfrak{C}
@@ -193,80 +196,225 @@ Finally note that
 \quad\iff\quad 
 \K_\vec{v}\K=\K.
 \]
-Therefore, if $\vec{v}\in \L_{\gamma(a)}\mathfrak{C}$, then $\pm R(\gamma'(a))\cdot \vec{v}\in \K$, and hence $R(\gamma'(a))\cdot \vec{v}\in \L_{\gamma(a)}\mathfrak{C}$.
-That is, $\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R(\gamma'(a))$ --- part \ref{SHORT.lem:key:b} is proved.
+Therefore, if $\vec{v}\in \L_{\gamma(a)}\mathfrak{C}$, then $\pm R^2_{\gamma'(a)}\cdot \vec{v}\in \K$, and hence $R^2_{\gamma'(a)}\cdot \vec{v}\in \L_{\gamma(a)}\mathfrak{C}$.
+That is, $\L_{\gamma(a)}\mathfrak{C}$ is an invariant subspace of $R^2_{\gamma'(a)}$ --- part \ref{SHORT.lem:key:b} is proved.
+\qeds
+
+\section{Main proposition}
+
+In this section we will prove the main proposition \ref{prom:rank} modulo one claim about jets of Riemannian metrics.
+First let us introduce notations to state the needed claim.
+
+Let $M$ be a smooth $m$-dimensional manifold with a Riemannian metric $\bm{g}$.
+Recall that $R^k_{\vec{x}}\:\T_p\to\T_p$ denotes the Jacobi operators of $\bm{g}$ of order $k$ for a tangent vector $\vec{x}\in\T_p$.
+
+Suppose $\vec x$ is a nonzero tangent vector at a point $p\in M$.
+An invariant subspace $V\subset \T_p$ of $R^k_{\vec{x}}$ will be called \emph{nontrivial} if $V\ni \vec{x}$ and $1< \dim V<m$.
+(Recall that $R^k_{\vec{x}}\cdot \vec{x}=0$
+for any $k$ and $\vec{x}\in \T_p$.
+Therefore the subspace spanned by $\vec{x}$ is always an invariant subspace of $R^k_{\vec{x}}$ for any $k$.)
+
+
+Given a point $p\in M$ and an integer $k\ge0$ denote by $\Sigma^k(p)$ the subset of the space $\mathcal{G}^k(p)$ of $k$-jets of Riemannian metrics at $p$ such that for some nonzero tangent vector $\vec{x}\in\T_p$ the Jacobi operators $R^2_{\vec{x}},\dots,R^k_{\vec{x}}$ have a common nontrivial invariant subspace.
+
+
+\begin{thm}{Claim}\label{clm:codim(sigma)} 
+Let $p$ be a point in a smooth $m$-dimensional manifold and $M$.
+Then $\Sigma^k(p)$ is semialgebraic subset in the space $\mathcal{G}^k(p)$ of all $k$-jets at $p$.
+Moreover, 
+\[\codim\Sigma^k(p)\to\infty\] 
+as $k\to\infty$.
+\end{thm}
+
+This claim will be proved in Section~\ref{sec:normalization}.
+
+\parit{Proof of \ref{prom:rank} modulo \ref{clm:codim(sigma)}.}
+Suppose a point $p$ is a nonextreme point of convex set $\mathfrak{C}$ in a Riemannian manifold $(M,\bm{g})$;
+that is, $p$ lies on a nonconstant geodesic $\gamma\:(a,b)\to\mathfrak{C}$.
+
+According to the key lemma (\ref{lem:key}), the family \emph{maximal linear subspace} $\L_{\gamma(t)}\mathfrak{C}$ of $\K_{\gamma(t)}\mathfrak{C}$ is parallel along $\gamma$ and invariant for $R^2_{\gamma(t)}$ for any $k$.
+Note that $\L_p$ is nontrivial if and only if $\rank p$ is neither $1$, nor $m$.
+
+Further, if a geodesic $\gamma$ admits a parallel family $L_t\subset \T_{\gamma(t)}$ of nontrivial invariant subspaces for all $R^2_{\gamma(t)}$, then we say that $\gamma$ is \emph{exceptional}.
+So it is sufficient to show that generic Riemannian manifold $(M,\bm{g})$ does not have exceptional geodesics.
+
+Choose a compact subset $K\subset M$ and $\eps>0$.
+Consider the set $Z(K,\eps)$ of all Riemannian metrics $\bm{g}$ on $M$ such that there exists an exeptional geodesic $\gamma$ in $(M,\bm{g})$ that starts at a point in $K$ and has length $\eps$.
+Since the geodesics and the curvature tensor depend continuously on the Riemannian metric in $\mathcal C^2$-topology, we get that the set $Z(K,\eps)$ is closed with respect to the $\mathcal C^2$-topology.
+
+Suppose $\gamma$ is an exceptional geodesic that passes thru $p$ in the direction $\vec x$.
+By taking covariant derivative along $\gamma$, we get that the Jacobi operators $R^k_{\vec{x}}$ have a common nontrivial invariant subspace.
+In other words, 
+\[Z^k\supset Z(K,\eps),\eqlbl{eq:Zk<Z(K,eps)}\]
+where $Z^k$ denotes the set of all smooth Riemannian metrics on $M$ such that $k$-jet at one point of $p\in K$ belongs to $\Sigma^k(p)$.
+
+By the very definition of $Z^k$, it is closed with respect to $\mathcal C^{k}$-topology on the space of all Riemannian metrics on $M$.
+Applying Claim~\ref{clm:codim(sigma)} and the Thom transversality theorem \cite[2.3.2]{eliashberg-mishachev}, we get that $Z^k$ is $\mathcal{C}^k$-meager for sufficiently large $k$;
+that is, its complement is a dense G-delta set in the space of all Riemannian metrics on $M$ with $\mathcal{C}^k$-topology.
+
+Since $Z(K,\eps)$ is closed with respect to the $\mathcal C^2$-topology, \ref{eq:Zk<Z(K,eps)} implies that $Z(K,\eps)$ is $\mathcal{C}^k$-meager in the space of all Riemannian metrics on $M$.
+
+
+Choose a nested sequence of compact sets $K_1\z\subset K_2\subset \dots$ that cover whole $M$ and set $\eps_n=\tfrac1n$.
+Set 
+\[Z(M)=\bigcup_n Z(K_n,\eps_n);\]
+since $Z(K_n,\eps_n)$ is $\mathcal{C}^2$-meager for every $n$, so is $Z(M)$.
+
+It remains to note that $\bm{g}\in Z(M)$ if and only if $(M,\bm{g})$ has an exeptional geodesic.
 \qeds
 
 
+\section{Main theorem}
+
+In the proof of the main theorem (\ref{thm:main}) we will use following claims that make it possible to extend some results about convex sets in Euclidean space to Riemannian manifolds.
+
+\begin{thm}{Claim}\label{clm:convex}
+Suppose that $\mathfrak{C}$ is a closed convex set in a Riemannian manifold $(M,\bm{g})$ and $x\in \mathfrak{C}$.
+Then there is a smooth chart $s\:U\to M$ that covers $x$ such that the inverse image $s^{-1}\mathfrak{C}$ is a convex subset in $U$.
+\end{thm}
+
+\parit{Proof.}
+Choose normal coordinates $(u_1,\dots, u_m)$ in a small spherical neighborhood of $x$.
+We may assume that the $u_1$-axis point in the relative interior of~$\K_x\mathfrak{C}$.
+
+Set $w_1=u_1-u_2^2-\dots-u_m^2$ and observe that the coordinates
+$(w_1,u_2,\dots, u_m)$ do the trick.
+\qeds
+
+Since any closed convex set in Euclidean space is a topological manifold with boundary, applying \ref{clm:convex} we get the following:
+
+\begin{thm}{Proposition}\label{prop:mnfld}
+Any connected closed convex set $\mathfrak{C}$ in a Riemannian manifold $(M,\bm{g})$ is homeomorphic to a manifold with boundary, say $\mathfrak{B}$.
+Moreover, the complement $\mathfrak{C}\backslash \mathfrak{B}$ is a totaly geodesic submanifold of $(M,\bm{g})$.
+\end{thm}
+
+Applying the result of Luděk 
+Zajíček \cite{zajicek} 
+together with \ref{clm:convex} we also get the following:
+
+\begin{thm}{Proposition}\label{prop:rectifiable}
+Let $\mathfrak{C}$ be a closed convex set in a Riemannian manifold $(M,\bm{g})$.
+Then the set of points in $\mathfrak{C}$ with rank at most $k$ is countably \emph{$k$-rectifiable};
+that is, this set can be  covered by images of a countable set of Lipschitz maps $\RR^k\to (M,\bm{g})$.
+\end{thm}
+
+\parit{Proof of \ref{thm:main}.}
+Let $\mathfrak B$ be as in \ref{prop:mnfld}; recall that $\mathfrak C\setminus \mathfrak B$ is a geodesic submanifold of $(M,\bm{g})$;
+denote its dimension by $d$.
+The tangent cone $\K_p \mathfrak C$ at any $p \in \mathfrak C\setminus \mathfrak B$ is $d$-dimensional linear space.
+By Proposition \ref{prom:rank}, $d=1$ or $d=m$.
+In the first case, $\mathfrak C\setminus \mathfrak B$ is a geodesic in $(M,\bm{g})$;
+hence $\mathfrak C$ is contained in a geodesic as well.
+In the latter case, $\mathfrak C\setminus \mathfrak B$ is open in $M$ --- part \ref{SHORT.thm:main:interior} is proved.
+
+By Proposition \ref{prom:rank} any non-extreme point $x\in \partial \mathfrak C$ has rank 1.
+Thus there is unique line in $\K_x\mathfrak C$ and it is the tangent line of the geodesic $\gamma$ contained in $\mathfrak C$ and having $p$ as an inner point. 
+
+Let us extend $\gamma$ to a maximal open interval, so that $\gamma$ stays in $\mathfrak C$;
+note that $p$ uniquely defines $\gamma$. 
+By the main statement of the key lemma, all points on $\gamma$ lie on $\partial \mathfrak C$.
+By the definition, all such geodesics consist of non-extreme points.
+
+It gives a subdivision of the set of non-extreme points of $\partial\mathfrak C$ into $\bm{g}$-geodesics with positive lengths.
+By \ref{prop:rectifiable}, there only countably many of such geodesics.
+\qeds
+
+\parit{Proof of the corollary (\ref{cor:caratheodory}).}
+Start with $Q=Q_0$ and define inductively $Q_{i+1}$ to be the union of all minimizing geodesics between pairs of points of $Q_i$.
+Note that the union $\mathfrak{C}= \bigcup_{i} 
+Q_i$ is the convex hull of $Q$.
+
+Assume that $\mathfrak{C}$ is closed and not equal to $M$; in particular $\partial\mathfrak{C}\ne \varnothing$.
+Since $Q$ is not contained in a geodesic, by the main theorem, $\mathfrak{C}$ has a non-trivial interior.
+By the construction of $\mathfrak{C}$ above, any point $x\in \mathfrak{C} \setminus Q$ is not an extreme point of~$\mathfrak{C}$.
+
+Assume $\partial \mathfrak{C} \not\subset Q$.
+By the main theorem the topological manifold $\partial \mathfrak{C}$ is the union of the compact subset $Q\cap \partial \mathfrak{C}$ and a countable union of geodesics.
+But $\partial \mathfrak{C} \setminus Q$ is an $(m-1)$-dimensional topological manifold.
+In particular it is not a union of countably many disjoint simple curves --- a contradiction.
+\qeds
+
 
 \section{Normalization of metrics}
+\label{sec:normalization}
 
 Choose a Euclidean space $\T$.
 Consider the space $\mathcal{G}$ of germs of Riemannian metrics on $\T$ at the origin that coincide with the canonical metric at the origin.
-Any germ in $\mathcal{G}$ can described as $\langle G\cdot \vec x,\vec y\rangle$ for a field $G$ of positive self-adjoint operators on $\T$ defined in a neighborhood of the origin such that $G(0)=\id$.
+Any germ in $\mathcal{G}$ can described as $\langle G\cdot \vec x,\vec y\rangle$ for a field $G$ of positive self-adjoint operators on $\T$ defined in a neighborhood of the origin such that $G_0=\id$.
 
-Recall that $k$-jet of $G$ can be thought of as the Taylor polynomilal of $G$ of degree $k$, that is
-\[G(\vec{x})=\id + G_1(\vec x)+\dots+G_k(\vec x) + o(|\vec x|^k),
+Recall that $k$-jet of the field $G$ can be thought of as the Taylor polynomilal of $G$ of degree $k$
+\[G_{\vec x}=\id + G^1_{\vec x}+\dots+G^k_{\vec x} + o(|\vec x|^k),
 \eqlbl{eq:k-jet}\]
-where $G_i$ is a homogeneous polynomial of degreee $i$ defined on $\T$ with values in the self-adjoint operators on $\T$.
-Note that every such array of polynomials $G_1,\dots, G_k$ can appear in \ref{eq:k-jet}.
+where $\vec x\mapsto G^i_{\vec x}$ is a homogeneous polynomial of degreee $i$ defined for $\vec x\in\T$ with values in the self-adjoint operators on $\T$.
+
+Note that every array of polynomials $G^1,\dots, G^k$ with the described conditions can appear in \ref{eq:k-jet} for a germ in $\mathcal{G}$.
 It follows since the germ defined by 
-\[G(\vec{x})=\id + G_1(\vec x)+\dots+G_k(\vec x)\eqlbl{eq:k-jet+}\]
+\[G_{\vec{x}}=\id + G^1_{\vec x}+\dots+G^k_{\vec x}\eqlbl{eq:k-jet+}\]
 is in $\mathcal{G}$.
 The space of $k$-jets of germs in $\mathcal{G}$ at the origin will be denoted by~$\mathcal{G}^k$.
 
-The higher Jacobi opertators $R_k$ are homogeneous polynomials of degree $k$ on $\T$ with values in the self-adjoint operators on $\T$;
-it is defined by
-\[R_k(\vec x)\cdot \vec v=(\nabla^{k-2}_{\vec x}\Rm)(\vec v,\vec x)\cdot\vec x;\]
-we assume that $R_1=0$.
-Recall that $R_i(\vec x)\cdot \vec x=0$ for any $\vec x$;
-the space of such arrays $(R_1,\dots,R_k)$ will be denoted by $\mathcal{R}^k$.
+Suppose that a germ in $\mathcal{G}$ is decribed by a field $G$ on $\T$.
+Consider its array Jacobi opertators $(R^2,\dots,R^k)$ at the origin.
+Identities in Section~\ref{sec:key} imply that any such array $(R^2,\dots,R^k)$ belongs to the space $\mathcal{R}^k$ defined by the following conditions: (1)
+each $R^i$ is a homogeneous polynomials of degree $i$ on $\T$ with values in the self-adjoint operators on $\T$,
+and (2) $R^i_{\vec x}\cdot \vec x=0$ for any $\vec x\in\T$.
 
 The formulas for curvature tensor define a natural algebraic map 
 \[\rho_k\:\mathcal{G}^k\to \mathcal{R}^k.\]
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:submersion}
 The map $\rho_k$ is an algebraic submersion.
 \end{thm}
 
-Before going into the proof we recall results about metric tensor in the normal coordinates.
+Before diving into the proof we recall results about metric tensor in the normal coordinates.
 
-A germ in $\mathcal{G}$ will be called \emph{normal} if the standard coordinates on $\T$ coinside with normal coordinates of the germ in a neigborhood of the origin.
-By the Gauss lemma, a germ of $G$ is normal if and only if 
-\[G(\vec{x})\cdot \vec{x}=\vec{x}\eqlbl{eq:Gauss}\]
+A germ in $\mathcal{G}$ will be called \emph{normal} if the standard coordinates on $\T$ coincide with normal coordinates of the germ in a neighborhood of the origin.
+By the Gauss lemma, a germ defined by $G$ is normal if and only if 
+\[G_{\vec{x}}\cdot \vec{x}=\vec{x}\eqlbl{eq:Gauss}\]
 for all small $\vec{x}\in \T$.
-The subspace of normal germs in $\mathcal{G}$ and their $k$-jets will be denoted by $\mathcal{N}$ and $\mathcal{N}^k$ respectively.
-
-Suppose that a normal $k$-jet is described by polynomials $G_1,\dots, G_k$ as in \ref{eq:k-jet}.
-(In this case $G_1=0$, but it will not be important.)
-Note that \ref{eq:Gauss} implies that
-\[G_i(\vec{x})\cdot\vec{x}=0
-\eqlbl{eq:Gaussi}\] 
-for each $i$.
-Moreover, for an array of polynomials $G_1,\dots,G_k$  such that $G_i$ is homogeneous of degree $i$ and \ref{eq:Gaussi} holds for each $i$, the sum \ref{eq:k-jet+} defines a normal $k$-jet;
-that is, \ref{eq:Gaussi} is the only condition on the  normal $k$-jets.
-
-The polynomials $G_1,\dots,G_k$ of a normal $k$-jet $G$ can be written as an algebraic expression in terms of $R_1,\dots,R_k$;
-moreover for each $k$ we have 
-\[G_k=a_k\cdot R_k + A_k,\eqlbl{eq:a+A}\]
-where $a_k$ is a nonzero constant and $A_k$ is an algebraic expression in terms of $R_1,\dots R_{k-2}$.
-This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.
-
-Note that \ref{eq:a+A} implies the following:
+The subspace of normal germs in $\mathcal{G}$, and their $k$-jets will be denoted by $\mathcal{N}$ and $\mathcal{N}^k$ respectively.
 
 \begin{thm}{Claim}\label{clm:diff}
 The map $\rho_k$ defines an algebraic diffeomorphism $\mathcal{N}^k\leftrightarrow\mathcal{R}^k$.
 \end{thm}
 
+\parit{Proof.}
+Let $G$ describes a germ in $\mathcal{N}$;
+and $G^1,\dots, G^k$ be as in \ref{eq:k-jet}.
+(In this case $G^1=0$, but it will not be important.)
 
-\begin{wrapfigure}{r}{32 mm}
-\vskip-0mm
+
+Note that \ref{eq:Gauss} implies that
+\[G^i_{\vec{x}}\cdot \vec{x}=0
+\eqlbl{eq:Gaussi}\] 
+for any $i$.
+Moreover, for an array of polynomials $G^1,\dots,G^k$  such that $G^i$ is homogeneous of degree $i$ and \ref{eq:Gaussi} holds for each $i$, the sum \ref{eq:k-jet+} defines a normal $k$-jet;
+that is, \ref{eq:Gaussi} is the only condition on the  normal $k$-jets.
+
+The polynomials $G^1,\dots,G^k$ of a normal $k$-jet can be written as an algebraic expression in terms of $R^2,\dots,R^k$;
+moreover for each $k$ we have 
+\[G^k=a_k\cdot  R^k + A^k,\eqlbl{eq:a+A}\]
+where $a_k$ is a nonzero constant and $A^k$ is a field of self-adjoint operators that can be written as a polynomial of $R^2,\dots R^{k-2}$.
+This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.
+(It worth mentioning that single identity $R^i_{\vec x}\cdot \vec x=0$ encodes all symmetries of the curvature operator and its covariant derivatives.
+It follows since $R^2,\dots,R^k$ describe the normal $k$-jet of the metric, and therefore the tensors $\nabla^{i}\Rm$ for $i\le k-2$.)
+
+Now the claim follows by induction on $k$; the base is trivial and the step follows from \ref{eq:a+A}.
+\qeds
+
+
+
+
+
+\begin{wrapfigure}{r}{34mm}
+\vskip-4mm
+\centering
 \begin{tikzpicture}[scale=2]
   \node (1) at (0,1) {$\mathcal{G}$};
-  \node (2) at (1,1){$\mathcal{N}$};
+  \node (2) at (1.4,1){$\mathcal{N}$};
   \node (11) at (0,0){$\mathcal{G}^k$};
-  \node (12) at (1,0) {$\mathcal{N}^k$};
-    \node (21) at (.5,-5/6) {$\mathcal{R}^k$};
+  \node (12) at (1.4,0) {$\mathcal{N}^k$};
+    \node (21) at (.7,-5/6) {$\mathcal{R}^k$};
 \draw[
     >=latex,
 %   every node/.style={above,midway},% either
@@ -286,7 +434,11 @@ The map $\rho_k$ defines an algebraic diffeomorphism $\mathcal{N}^k\leftrightarr
 \label{diagram-page}
 \end{wrapfigure}
 
-\parit{Proof.}
+\parit{Proof of \ref{prop:submersion}.}
+It is sufficient to show that 
+\[\rho_k\:\mathcal{G}^k\to \mathcal{R}^k\]
+is a submersion.
+
 Any germ becomes normal if the space $\T$ is reparametrized by its exponential map.
 It defines the normalization map 
 $\mathcal{G}\xrightarrow{\nu} \mathcal{N}$.
@@ -294,7 +446,7 @@ $\mathcal{G}\xrightarrow{\nu} \mathcal{N}$.
 The maps $\mathcal{G}^k\xrightarrow{\rho_k}\mathcal{R}^k\z{\xleftrightarrow{\rho_k}}\mathcal{N}^k$ together with the forgetful maps $\mathcal{G}\to\mathcal{G}^k$ and $\mathcal{N}\to\mathcal{N}^k$  commute.
 In particular we get a map $\mathcal{G}^k\xrightarrow{\nu_k}\mathcal{N}^k$ that commutes with the forgetful maps and the noramilzation $\nu$.
 
-Note that the inclusion map $\mathcal{N}\stackrel{\iota}{\hookrightarrow} \mathcal{G}$ is a right inverse of $\nu$.
+Note that the inclusion $\mathcal{N}\stackrel{\iota}{\hookrightarrow} \mathcal{G}$ is a right inverse of $\nu$.
 Moreover by changing the parametrization on $\T$ to normal coordinates of a given germ $G$ in $\mathcal{G}$, we may assume that $G$ lies in the image of $\iota$.
 Therefore there is a map $\mathcal{N}^k\stackrel{\iota_k}{\hookrightarrow} \mathcal{G}^k$ that is right inverse of $\nu$ such that its image contains any given jet $\mathcal{G}^k$.
 Whence $\mathcal{G}^k\xrightarrow{\nu^k} \mathcal{N}^k$ is an algebraic submersion.
@@ -303,170 +455,19 @@ By \ref{clm:diff}, $\mathcal{N}^k\xleftrightarrow{\rho_k}\mathcal{R}^k$ is an ag
 \qeds
 
 
-\section{Genericity }
-
-Let $M$ be a smooth $m$-dimensional manifold with a Riemannian metric $g$.
-
-Recall that $R^{(k)}(\vec{x})\cdot \vec{x}=0$
-for any $k$ and $\vec{x}\in \T_p$.
-It follows that the the subspace spanned by $\vec{x}$ is invariant subspace of $R^{(k)}(\vec{x})$ for any $k$.
-An invariant subspace that contains $\vec{x}$ of dimension at between $2$ and $m-1$ will be regarded as \emph{nontrivial}.
-
-Suppose a nonconstant geodesic $\gamma$ in a Riemannian manifold has a parallel family of subspace $V_t \subset \T_{\gamma (t)}$ that are nontrivial invariant subspaces of $R(\gamma'(t))$ for any $t$.
-In this case we say briefly that $\gamma$ admits an \emph{invariant family of subspaces}.
-
-Let $M$ be an $m$-dimensional smooth manifold.
-Choose a compact subset $K\subset M$ and $\eps>0$.
-Consider the set $G(K,\eps)$ of all Riemannian metrics $g$ on $M$ such that there exists a geodesic $\gamma$ in $(M,g)$ such that (1) $\gamma$ starts in $K$, (2)  $\length\gamma=\eps$, and (3) $\gamma$ admits an invariant family of subspaces.
-
-Since the geodesics and the curvature tensor depend continuously on the Riemannian metric in $\mathcal C^2$-topology, we get that 
-
-\begin{thm}{Claim}\label{clm:G}
-The set $G(K,\eps)$ is closed with respect to the $\mathcal C^2$-topology on the space of all Riemannian metrics on $M$.
-\end{thm}
-
-Denote by $G^k(K)$ the set of all smooth Riemannian metrics, such that for some $p\in K$ and a non-zero tangent vector $\vec{x}\in\T_p$ all the operators $R(\vec{x}),R'(\vec{x}),\dots,R^{(k)}(\vec{x})$ have a common nontrivial invariant subspace $V_0\subset \T_p$.
-
-By the very definition of $G^k(K)$ we get the following:
-
-\begin{thm}{Claim} $G^k(K)$ is closed with respect to $\mathcal C^{k+2}$-topology on the space of all Riemannian metrics on $M$.
-\end{thm}
-
-Suppose that $g\in G(K,\eps)$ and let $\gamma$ is a geodesic as above starting at $p\in K$ in the direction $\vec{x}$.
-Taking covariant derivatives along $\gamma$, we get the following:
-
-\begin{thm}{Claim}
-$G^k(K)\z\supset G(K,\eps)$ for any integer $k\ge 0$, compact set $K\subset M$, and $\eps>0$.
-\end{thm}
 
 
-\begin{thm}{Proposition}\label{prop:G}
-Let $M$ be a smooth $m$-dimensional manifold.
-Then, for any $k\geq 6$, the set $G^k(K)$ is nowhere dense in the space of all Riemannian metrics.
-\end{thm}
-
-\parit{Proof.}
-We may assume that $m\ge3$; otherwise there are no nontrivial subspaces. 
-
-Choose nonzero $\vec{x}\in \T_p$.
-Note that $k$-tuples $(R(\vec{x}),...,R^{(k)}(\vec{x}))$ that have a common nontrivial invariant subspace is an algebraic subset of~$\mathcal{R}^k(p)$.
-Observe that the codimension of this subset is $(m-2)\z\cdot (k-1)$ in $\mathcal{R}^k(p)$.
-The latter follows since the self-adjoint operators $R(\vec{x}),...,R^{(k)}(\vec{x})$ can be arbitrary, provided $R^{(i)}(\vec{x})=0$ for any $i$.
-
-Consider the union $\Sigma$ of these subspaces for all unit vectors $\vec{x}\in \T_p$.
-Note that $\Sigma\subset \mathcal{R}^k(p)$ is algebraic and its codimension is at least 
-\[\ell=(m-2)\z\cdot (k-1)-(m-1).\]
-
-By \ref{prop:submersion}, $\rho^{-1}(\Sigma)$ has codimension at least $\ell$ in the space of jets $\mathcal{J}^{k+2}(p)$.
-
-Since $m\ge 3$, we get that $\ell> m$ if $k\ge 6$.
-It remains to apply the Thom transversality theorem \cite[2.3.2]{eliashberg-mishachev}.
-\qeds
-
-Let $M$ be a smooth manifold.
-Choose a nested sequence of compact sets $K_1\z\subset K_2\subset \dots$ that cover whole $M$ and set $\eps_n=\tfrac1n$.
-Set 
-\[G(M)=\bigcup_n G(K_n,\eps_n).\]
-Note that $g\in G(M)$ if and only if $(M,g)$ has a nonconstant geodesic with an invariant family of subspaces.
-
-Note that the statements in this section imply the following:
-
-\begin{thm}{Claim}\label{clm:meager}
-The set $G(M)$ is $\mathcal{C}^2$-meager; that is, its complement is a dense G-delta set in the space of all Riemannian metrics on $M$ with $\mathcal{C}^2$-topology.
-
-In other words, if $g$ is a $\mathcal C^2$-generic Riemannian metric on a smooth manifold $M$,
-then $(M,g)$ does not have nonconstant geodesic with an invariant family of subspaces.
-\end{thm}
-
-
-\section{Structure of convex sets}
-
-The following claim makes it possible to extend some results about convex sets in Euclidean space to Riemannian manifolds.
-
-\begin{thm}{Claim}\label{clm:convex}
-Suppose that $\mathfrak{C}$ is a closed convex set in a Riemannian manifold $(M,g)$ and $x\in \mathfrak{C}$.
-Then there is a smooth chart $s\:U\to M$ that covers $x$ such that the inverse image $s^{-1}\mathfrak{C}$ is a convex subset in $U$.
-\end{thm}
-
-\parit{Proof.}
-Choose normal coordinates $(u_1,\dots, u_m)$ in a small spherical neighborhood of $x$.
-We may assume that the $u_1$-axis point in the relative interior of~$\K_x\mathfrak{C}$.
-
-Set $w_1=u_1-u_2^2-\dots-u_m^2$ and observe that the coordinates
-$(w_1,u_2,\dots, u_m)$ do the trick.
-\qeds
-
-Since any closed convex set in Euclidean space is a topological manifold with boundary, applying \ref{clm:convex} we get the following:
-
-\begin{thm}{Proposition}\label{prop:mnfld}
-Any connected closed convex set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is homeomorphic to a manifold with boundary, say $\mathfrak{B}$.
-Moreover, the complement $\mathfrak{C}\backslash \mathfrak{B}$ is a totaly geodesic submanifold of $(M,g)$.
-\end{thm}
-
-Applying the result of Luděk 
-Zajíček \cite{zajicek} 
-together with \ref{clm:convex} we also get the following:
-
-\begin{thm}{Proposition}\label{prop:rectifiable}
-Let $\mathfrak{C}$ be a closed convex set in a Riemannian manifold $(M,g)$.
-Then the set of points in $\mathfrak{C}$ with rank at most $k$ is countably \emph{$k$-rectifiable};
-that is, this set can be  covered by images of a countable set of Lipschitz maps $\RR^k\to (M,g)$.
-\end{thm}
-
-\section{Proof assembling}
-
-\parit{Proof of the main proposition (\ref{prom:rank}).}
-Apply \ref{clm:meager} and the key lemma \mbox{(\ref{lem:key:b})}.
-
-
-\parit{Proof of the main theorem (\ref{thm:main}).}
-Let $\mathfrak B$ be as in \ref{prop:mnfld}; recall that $\mathfrak C\setminus \mathfrak B$ is a geodesic submanifold of $(M,g)$;
-denote its dimension by $d$.
-The tangent cone $\K_p \mathfrak C$ at any $p \in \mathfrak C\setminus \mathfrak B$ is $d$-dimensional linear space.
-By Proposition \ref{prom:rank},, $d=1$ or $d=m$.
-In the first case, $\mathfrak C\setminus \mathfrak B$ is a geodesic in $(M,g)$;
-hence $\mathfrak C$ is contained in a geodesic as well.
-In the latter case, $\mathfrak C\setminus \mathfrak B$ is open in $M$ --- part \ref{SHORT.thm:main:interior} is proved.
-
-By Proposition \ref{prom:rank} any non-extreme point $x\in \partial \mathfrak C$ has rank 1.
-Thus there is unique line in $\K_x\mathfrak C$ and it is the tangent line of the (therefore unique) geodesic $\gamma$ contained in $\mathfrak C$ and having $p$ as an inner point. 
-
-Let us extend $\gamma$ to a maximal open interval, so that $\gamma$ stays in $\mathfrak C$.
-By the main statement of the key lemma, all points on $\gamma$ lie on $\partial \mathfrak C$.
-By the definition, all such geodesics consist of non-extreme points.
-
-As seen above, through each non-extreme point on $\mathfrak C$ passes exactly one such geodesics.
-Thus we have subdivided the set of non-extreme points of $\partial\mathfrak C$ into $g$-geodesics with positive lengths.
-
-Finally, by \ref{prop:rectifiable}, there only countably many of such geodesics.
-\qeds
-
-\parit{Proof of the corollary (\ref{cor:caratheodory}).}
-The convex hull $\mathfrak{C}$ of $Q$ can be obtained as the following infinite union.
-We start with $Q=Q_0$ and define inductively $Q_{i+1}$ to be the union of all minimizing geodesics between pairs of points of $Q_i$.
-Then the union $\mathfrak{C}= \bigcup_{i} 
-Q_i$ is the convex hull of $Q$.
-
-Assume that $\mathfrak{C}$ is closed and not equal to $M$; in particular $\partial\mathfrak{C}\ne \varnothing$.
-Since $Q$ is not contained in a geodesic, by the main theorem, $\mathfrak{C}$ has a non-trivial interior.
-By the construction of $\mathfrak{C}$ above, any point $x\in \mathfrak{C} \setminus Q$ is not an extreme point of~$\mathfrak{C}$.
-
-Assume $\partial \mathfrak{C} \not\subset Q$.
-By the main theorem the topological manifold $\partial \mathfrak{C}$ is the union of the compact subset $Q\cap \partial \mathfrak{C}$ and a countable union of geodesics.
-But $\partial \mathfrak{C} \setminus Q$ is an $(m-1)$-dimensional topological manifold.
-In particular it is not a union of countably many disjoint simple curves --- a contradiction.
-\qeds
 
 \section{Final remarks}
 
-Recall that according to the main proposition (\ref{prom:rank}), if a geodesic $\gamma$ of a generic Riemannian manifold $(M,g)$ runs in the boundary of convex set $\mathfrak{C}$, then any point on $\gamma$ has rank 1.
+Recall that according to the main proposition (\ref{prom:rank}), if a geodesic $\gamma$ of a generic Riemannian manifold $(M,\bm{g})$ runs in the boundary of convex set $\mathfrak{C}$, then any point on $\gamma$ has rank 1.
 
 It is worth mentioning the following closely  related result of Anatoliy Milka \cite[§~4]{milka} in the opposite direction; originally it was proved for Euclidean spaces, but the same proof works for Riemannian manifolds:
 
 \begin{thm}{Milka's theorem}
-Let $\mathfrak{C}$ be a closed convex set in an arbitrary Riemannian manifold $(M,g)$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ with respect to the intrinsic metric of $\mathfrak {C}$.
+Let $\mathfrak{C}$ be a closed convex set in an arbitrary Riemannian manifold $(M,\bm{g})$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ with respect to the intrinsic metric of $\mathfrak {C}$.
 Suppose that all points on $\gamma$ have rank at most 1 in $\mathfrak{C}$.
-Then $\gamma$ is a geodesic of the ambient space $(M,g)$.
+Then $\gamma$ is a geodesic of the ambient space $(M,\bm{g})$.
 \end{thm}
 
 It turns out that generic Riemannian manifold contains nontrivial geodesics that run in a convex hypersurface;
@@ -474,7 +475,7 @@ for example nearly horizontal geodesic in the product $\mathbb{S}^2\times \RR$ w
 Moreover, it seems that the following statement holds true; maybe someone were to take on the burden of proving it formally:
 
 \begin{thm}{Stetement}
-Any Riemannian manifold $(M,g)$ contains a nontrivial geodesic  that runs in a convex hypersurface.
+Any Riemannian manifold $(M,\bm{g})$ contains a nontrivial geodesic  that runs in a convex hypersurface.
 \end{thm}
 
 
@@ -498,7 +499,7 @@ Such an example was constructed by Nicolas Monod \cite{monod-2016}.)
 
 \begin{thm}{Open question}
 Let $\mathfrak{C}$ be the closure of a convex hull of a set $Q$ in a Riemannian manifold.
-Suppose $\gamma$ is a maximal $g$-geodesic that runs in $\partial \mathfrak{C}$.
+Suppose $\gamma$ is a maximal $\bm{g}$-geodesic that runs in $\partial \mathfrak{C}$.
 Is it true that the ends of $\gamma$ belong to $Q$?
 \end{thm}
 
