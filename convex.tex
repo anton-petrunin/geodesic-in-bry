@@ -352,7 +352,7 @@ Choose an $m$-dimensional Euclidean space $\T$.
 Denote by $\mathcal{S}$ the space of self-adjoint operators on $\T$.
 
 Consider the space $\mathcal{G}$ of germs of Riemannian metrics on $\T$ at $0$ that coincide with the canonical metric at $0$.
-Any germ in $\mathcal{G}$ can described by $\langle G\cdot \vec v,\vec w\rangle$ where $G\:\vec x\mapsto G_\vec x$ is a smooth function $\T\to\mathcal{S}$ such that $G_0=\id$. 
+Any germ in $\mathcal{G}$ can described by $\langle G\cdot \vec v,\vec w\rangle$ where $\vec x\mapsto G_\vec x$ is a smooth function $\T\to\mathcal{S}$ such that $G_0=\id$. 
 
 Recall that $k$-jet of $G$ can be thought of as the Taylor polynomilal of $G$ of degree $k$
 $$G_\vec x=\id + G^1_\vec x+\dots+G^k_\vec x + o( |\vec x|^k ),
@@ -364,78 +364,85 @@ Note that every array of polynomials $G^1,\dots, G^k\:\T\to \mathcal{S}$ such th
 \eqlbl{eq:k-jet+}\]
 The space of $k$-jets of germs in $\mathcal{G}$ will be denoted by~$\mathcal{G}^k$.
 
-Suppose that a germ in $\mathcal{G}$ is described by $G\:\T\to\mathcal{S}$.
-Consider its array of Jacobi opertators $(R^2,\dots,R^k)$ at the origin.
-Identities in Section~\ref{sec:key} imply that any such array $(R^2,\dots,R^k)$ belongs to the space $\mathcal{R}^k$ defined by the following conditions: (1)
-each $R^i\:\T\to \mathcal{S}$ is a homogeneous polynomial,
-(2) $\deg R^i=i$,
-and (3) $R^i_\vec x\cdot \vec x=0$ for any $i$ and $\vec x\in\T$.
-(For $k=1$, these conditions would imply that $R^1=0$, so we can assume that $R^1$ is defined as well.)
-
-The formulas for curvature tensor define a natural algebraic map 
-$$\rho_k\:\mathcal{G}^k\to \mathcal{R}^k.$$
-
-Choose $\vec x\in \T$; denote by $\mathcal{S}_\vec x$ the subspace of $\mathcal{S}$ of the operators $S$ such that $S\cdot \vec x=0$.
-Note that
-\[\pi_\vec x\:(R^2,\dots,R^k)\mapsto(R^2_\vec x,\dots,R^k_\vec x).\]
-defines a map $\pi_\vec x\:\mathcal{R}^k\to \mathcal{S}_\vec x^{k-2}$. 
-
-\begin{thm}{Proposition}\label{prop:submersion}
-\begin{subthm}{prop:submersion:rho}
-The map $\rho_k:\mathcal{G}^k\to \mathcal{R}^k$ is an algebraic submersion.
-\end{subthm}
-
-\begin{subthm}{prop:submersion:pi}
-The map $\pi_\vec x\:\mathcal{R}^k\to \mathcal{S}_\vec x^{k-2}$
-is linear onto map for any $\vec x\ne0$.
-\end{subthm}
-
-In particular, for any nonzero $\vec x\in \T$, the composition $\pi_\vec x\circ \rho_k$ is an algebraic submersion 
-\end{thm}
-
-Before diving into the proof, let us recall results about metric tensor in the normal coordinates.
-
 A germ in $\mathcal{G}$ will be called \emph{normal} if the standard coordinates on $\T$ coincide with normal coordinates of the germ in a neighborhood of the origin.
 By the Gauss lemma, a germ defined by $G$ is normal if and only if 
 \[G_\vec x\cdot \vec x=\vec x\eqlbl{eq:Gauss}\]
 for all small $\vec x\in \T$.
 The subspace of normal germs in $\mathcal{G}$, and their $k$-jets will be denoted by $\mathcal{N}$ and $\mathcal{N}^k$ respectively.
 
-\begin{thm}{Claim}\label{clm:diff}
-The map $\rho_k$ defines an algebraic diffeomorphism $\mathcal{N}^k\leftrightarrow\mathcal{R}^k$.
-Moreover, $\rho_k\:\mathcal{N}^k\leftrightarrow\mathcal{R}^k$ and its inverse are polynomial maps.
-\end{thm}
-
-\parit{Proof of \ref{clm:diff} and \ref{prop:submersion:pi}.}
 Suppose that $G$ describes a germ in $\mathcal{N}$
 and $G^1,\dots, G^k$ be as in \ref{eq:k-jet}.
-
 By \ref{eq:Gauss} 
 \[G^i_\vec x\cdot \vec x=0
 \eqlbl{eq:Gaussi}\] 
 for any $i$.
 Moreover, for an array of polynomials $G^1,\dots,G^k\:\T\to\mathcal{S}$ such that $G^i$ is homogeneous of degree $i$ and \ref{eq:Gaussi} holds for each $i$, the sum \ref{eq:k-jet+} defines a normal $k$-jet;
 that is, \ref{eq:Gaussi} is the only condition on the  normal $k$-jets.
-Note that $G^1=0$;
-it follows sinse $G^1_\vec x$ is self-adjoint, $\vec x\mapsto G^1_\vec x$ is linear, and implies that $G^1_\vec x\vec y=-G^1_\vec y\vec x$ which follows from \ref{eq:Gaussi}.
 
-The polynomials $G^1,\dots,G^k$ of a normal $k$-jet can be written as an algebraic expression in terms of $R^1,\dots,R^k$;
-moreover for each $k$ we have 
-\[G^k=a_k\cdot  R^k + A^k,\eqlbl{eq:a+A}\]
-where $a_k$ is a nonzero constant and $A^k$ is a field of self-adjoint operators that can be written as a polynomial of $R^1,\dots R^{k-2}$; here we assume that $R^1=0$.
-This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.%
+Note that $G^1=0$; equivalently cristofels vanish in the normal coordinates.
+It also can be deduced algebraically from \ref{eq:Gaussi} and the following two facts:
+$G^1_\vec x$ is self-adjoint and 
+$\vec x\mapsto G^1_\vec x$ is linear.
+
+Choose $\vec x\in \T$; denote by $\mathcal{S}_\vec x$ the subspace of $\mathcal{S}$ of the operators $S$ such that $S\cdot \vec x=0$.
+By \ref{eq:Gaussi}, $G^i_\vec x\in \mathcal{S}_\vec x$ for any $\vec x$.
+The following claim says that $G^i_\vec x$ can be chosen arbitrary in $\mathcal{S}_\vec x$ for $i\ge 2$ and $\vec x\ne 0$.
+
+\begin{thm}{Claim}\label{clm:allSX}
+Given $\vec x\ne 0$ in $\T$ and a sequence of operators $A_2,\dots A_k\in \mathcal{S}_\vec x$ there is a germ $(G^1,\dots,G^k)$ in $\mathcal{N}^k$ such that $G^i_\vec x=A_i$ for any $i\ge 2$.
+\end{thm}
+
+\parit{Proof.}
+Choose a nonzero vector $\vec y$ perpendicular to $\vec x$;
+denote by $A$ the projection of $\T$ to the line spanned by $\vec y$.
+
+Given $\lambda\in \RR$ and $i\ge 2$ there is a normal germ such that $G^i_\vec x=\lambda\cdot A$ and $G^j_\vec x=0$ for all $j\ne i$;
+such examples can be found among the germs of products of a surface of revolution and Euclidean space.
+
+It remains to add constructed germs, for appropriate choices of $\vec y$ and $\lambda$ and use that Equation \ref{eq:Gaussi} is linear.
+\qeds
+
+
+Suppose that a germ in $\mathcal{G}$ is described by $G\:\T\to\mathcal{S}$.
+Consider its array of Jacobi opertators $(R^1,\dots,R^k)$ at the origin;
+recall that $R^1=0$.
+The identities in Section~\ref{sec:key} imply that any such array $(R^1,\dots,R^k)$ belongs to the space $\mathcal{R}^k$ defined by the following conditions: (1)
+each $R^i\:\T\to \mathcal{S}$ is a homogeneous polynomial,
+(2) $\deg R^i=i$,
+and (3) $R^i_\vec x\cdot \vec x=0$ for any $i$ and $\vec x\in\T$.
+Note that these conditions are exactly the same as for $G^i$ in $\mathcal{N}^k$.
+Therefore $\mathcal{R}^k$ can be identified with $\mathcal{N}^k$, but we will keep separate notations for them.
+In particular we may assume that $R^1=0$.
+
+The formulas for curvature tensor define a natural algebraic map 
+$$\rho_k\:\mathcal{G}^k\to \mathcal{R}^k.$$
+
+Suppose that $(G^1,\dots,G^k)\in \mathcal{N}^k$.
+Then \[G^k=a_k\cdot  R^k + A^k,\eqlbl{eq:a+A}\]
+where $a_k$ is a nonzero constant and $A^k$ is a field of self-adjoint operators that can be written as a polynomial of $R^1,\dots R^{k-2}$.
+This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.
+(In fact $a_k=-2\cdot{k-1}{k+1}$ and $A_k$ is a linear combination of compositions of $R^1,\dots R^{k-2}$, but we will not need it.)
 
 Note that formula \ref{eq:a+A} can be reverted 
 \[R^k=\tfrac 1{a_k}\cdot  G^k + B^k,\eqlbl{eq:a+B}\]
 where $B^k$ is a field of self-adjoint operators that can be written as a polynomial of $G^1,\dots G^{k-2}$.
 
-Now the claim follows by induction on $k$; the base is trivial and the step follows from \ref{eq:a+A} and \ref{eq:a+B}.
+Therefore we get the following:
 
-Choose $\vec x\ne 0$.
-Observe that $G^i_\vec x$ can be chosen arbitrary in $\mathcal{S}_\vec x$ for $i>1$.
-From \ref{eq:a+B}, it follows that $R^i_\vec x$ can be chosen arbitrary in $\mathcal{S}_\vec x$ for $i>1$;
-hence \ref{prop:submersion:pi} follows.
-\qeds
+
+\begin{thm}{Claim}\label{clm:diff}
+The restriction $\rho_k|_{\mathcal{N}^k}$ is an algebraic diffeomorphism $\mathcal{N}^k\leftrightarrow\mathcal{R}^k$.
+\end{thm}
+
+Applying \ref{clm:allSX}, we get the following:
+
+\begin{thm}{Corollary}\label{cor:Rall}
+Given $\vec x\ne 0$ in $\T$ and a sequence of operators $A_2,\dots A_k\in \mathcal{S}_\vec x$ there is a germ $\mathcal{N}^k$ with Jacobi operators $R^i_\vec x=A_i$ for any $i\ge 2$.
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:submersion}
+The map $\rho_k:\mathcal{G}^k\to \mathcal{R}^k$ is an algebraic submersion.
+\end{thm}
 
 \begin{wrapfigure}{r}{34mm}
 \vskip-4mm
@@ -466,7 +473,7 @@ hence \ref{prop:submersion:pi} follows.
 \label{diagram-page}
 \end{wrapfigure}
 
-\parit{Proof of \ref{prop:submersion:rho}.}
+\parit{Proof.}
 Evidently $\rho_k$ is algebraic.
 
 Any germ in $\mathcal{G}$ becomes normal if the space $\T$ is reparametrized by its exponential map.
@@ -479,15 +486,15 @@ In particular we get a map $\mathcal{G}^k\xrightarrow{\nu_k}\mathcal{N}^k$ that 
 Note that the inclusion $\mathcal{N}\stackrel{\iota}{\hookrightarrow} \mathcal{G}$ is a right inverse of $\nu$.
 Moreover by changing the parametrization on $\T$ to normal coordinates of a given germ $G$ in $\mathcal{G}$, we may assume that $G$ lies in the image of $\iota$.
 Therefore there is a map $\mathcal{N}^k\stackrel{\iota_k}{\hookrightarrow} \mathcal{G}^k$ that is right inverse of $\nu$ such that its image contains any given jet $\mathcal{G}^k$.
-Whence $\mathcal{G}^k\xrightarrow{\nu^k} \mathcal{N}^k$ is an algebraic submersion.
+Whence $\mathcal{G}^k\xrightarrow{\nu^k} \mathcal{N}^k$ is an submersion.
 
-By \ref{clm:diff}, $\mathcal{N}^k\xleftrightarrow{\rho_k}\mathcal{R}^k$ is an agebraic diffeomorphism, hence the result.
+By \ref{clm:diff}, $\mathcal{N}^k\xleftrightarrow{\rho_k}\mathcal{R}^k$ is a diffeomorphism, hence the result.
 \qeds
 
 \parit{Proof of \ref{clm:codim-sigma}.}
 Choose $p\in M$;
 set $\tilde\Sigma^k=\tilde\Sigma^k(p)$.
-Denote by $\tilde{\mathcal{G}}^k$ the space of \emph{all} $k$-jets of Riemannian metric at $p$.
+Recall that $\tilde{\mathcal{G}}^k=\tilde{\mathcal{G}}^k(p)$ denotes the space of \emph{all} $k$-jets of Riemannian metric at $p$.
 By Tarski--Seidenberg theorem, $\tilde\Sigma^k$ is a semialgebraic subset of $\tilde{\mathcal{G}}^k$.
 
 
@@ -495,8 +502,7 @@ Note that a jet in $\tilde{\mathcal{G}}^0$
 is described by the metric tensor $g_0$  on $\T=\T_pM$.
 Further, the fiber of the forgetful map $\tilde{\mathcal{G}}^k\to \tilde{\mathcal{G}}^0$ can be naturally identified with $\mathcal{G}^k$ for a chart $\T\to M$ and the Euclidean structure on $\T$ given by $g_0$.
 
-Fix $g_0$;
-it defines an inclusion $\mathcal{G}^k\hookrightarrow\tilde{\mathcal{G}}^k$.
+In other words, if we choose a chart $\T\to M$, then $g_0$ defines an inclusion $\mathcal{G}^k\hookrightarrow\tilde{\mathcal{G}}^k$.
 Consider the intersection $\Sigma^k\z=\tilde\Sigma^k\cap \mathcal{G}^k$.
 Note that it is sufficient to show that 
 \[\codim\Sigma^k\to\infty
@@ -509,7 +515,7 @@ Denote by $\mathcal{L}$ the algebraic manifold of all pairs $(L,\vec x)$ where $
 Given $(L,\vec x)\in\mathcal{L}$, denote by $\Sigma^k(L,\vec x)$ the subset of jets in $\mathcal{G}^k$ such that $L$ is an invariant subspace of all Jacobi operators $R^i_\vec x$  for any $i\le k$.
 
 Choose $(L,\vec x)\in\mathcal{L}$;
-it is straightforward to check that 
+note that \ref{cor:Rall} implies that
 \[\codim\Sigma^k(L,\vec x)\to\infty\quad \text{as}\quad k\to \infty.\]
 Observe that 
 \[\codim\Sigma^k\ge \codim\Sigma^k(L,\vec x)-\dim\mathcal{L}.\]
@@ -526,9 +532,23 @@ Moreover, it seems that the following statement holds true; maybe someone were t
 Any Riemannian manifold $(M,g)$ contains a nontrivial geodesic  that runs in a convex hypersurface.
 \end{thm}
 
+\begin{thm}{Open question}
+Is it true that the set of maximal geodesics that run in a convex hypersurface of a generic Riemannian manifolds is locally finite?
+\end{thm}
 
 \begin{thm}{Open question}
-Is it true that the set of geodesics on convex hypersurfaces in generic Riemannian manifolds is locally finite?
+Let $\mathfrak{C}$ be the closure of a convex hull of a set $Q$ in a Riemannian manifold.
+Suppose $\gamma$ is a maximal $g$-geodesic that runs in $\partial \mathfrak{C}$.
+Is it true that the ends of $\gamma$ belong to $Q$?
+\end{thm}
+
+It is worth mentioning the following theorem that nearly follows from one result of Anatoliy Milka \cite[§~4]{milka}.
+It is closely related to the main theorem, but goes in the opposite direction.
+
+\begin{thm}{Theorem}
+Let $\mathfrak{C}$ be a closed convex set in an arbitrary $m$-dimensional Riemannian manifold $(M,g)$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ with respect to the intrinsic metric of $\mathfrak {C}$.
+Suppose that all points on $\gamma$ have rank at most $m-1$ in $\mathfrak{C}$.
+Then $\gamma$ is a geodesic of the ambient space $(M,g)$.
 \end{thm}
 
 There is a chance that presented argument, when properly extended to infinite-dimensional manifolds, might lead to a negative answer to the following question of Mikhael Gromov \cite[6.B\textsubscript{1}(f)]{gromov-1993}.
@@ -541,22 +561,8 @@ Is it true that any compact set of $X$ lies in a compact convex subset?
 For example it possible that any compact subset of a \emph{typical} $\CAT(0)$ space are geodesic segments.
 Altho we do not see a right definition of a \emph{typical} $\CAT(0)$ space so far.
 
-\begin{thm}{Open question}
-Let $\mathfrak{C}$ be the closure of a convex hull of a set $Q$ in a Riemannian manifold.
-Suppose $\gamma$ is a maximal $g$-geodesic that runs in $\partial \mathfrak{C}$.
-Is it true that the ends of $\gamma$ belong to $Q$?
-\end{thm}
-
-
-It is worth mentioning the following result of Anatoliy Milka \cite[§~4]{milka} which is closely related to the main theorem, but goes in the opposite direction; originally it was proved for Euclidean spaces, but the same proof works for Riemannian manifolds:
-
-\begin{thm}{Milka's theorem}
-Let $\mathfrak{C}$ be a closed convex set in an arbitrary $m$-dimensional Riemannian manifold $(M,g)$ and $\gamma$ be a geodesic in the boundary of $\mathfrak{C}$ with respect to the intrinsic metric of $\mathfrak {C}$.
-Suppose that all points on $\gamma$ have rank at most $m-1$ in $\mathfrak{C}$.
-Then $\gamma$ is a geodesic of the ambient space $(M,g)$.
-\end{thm}
-
-
-\bibliographystyle{ieeetr}
-\bibliography{convex}
+{\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+}
 \end{document}
