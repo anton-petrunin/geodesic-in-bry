@@ -515,8 +515,16 @@ Denote by $\mathcal{L}$ the algebraic manifold of all pairs $(L,\vec x)$ where $
 Given $(L,\vec x)\in\mathcal{L}$, denote by $\Sigma^k(L,\vec x)$ the subset of jets in $\mathcal{G}^k$ such that $L$ is an invariant subspace of all Jacobi operators $R^i_\vec x$  for any $i\le k$.
 
 Choose $(L,\vec x)\in\mathcal{L}$;
-note that \ref{cor:Rall} implies that
-\[\codim\Sigma^k(L,\vec x)\to\infty\quad \text{as}\quad k\to \infty.\]
+note that \ref{cor:Rall} and \ref{prop:submersion} imply that
+\[\codim\Sigma^k(L,\vec x)\to\infty\quad \text{as}\quad k\to \infty.\eqlbl{eq:codim-Sigma(L,x)}\]
+Indeed, a normal germ $(G^1,\dots G^k)$ belongs to $\Sigma^k(L,\vec x)$ if and only if all the Jacobi operators 
+$R^2_\vec x,\dots, R^k_\vec x\in \mathcal{S}_\vec x$ have invariant subspace $L$.
+The codimension of this subspace in $\mathcal{S}^{k-1}$ grows with $k$.
+By \ref{prop:submersion} and \ref{cor:Rall} the composition 
+$\mathcal{G}^k\z\to \mathcal{R}^k\z\to\mathcal{S}^{k-1}_\vec x$ that sens a germ to the array of its Jacobi operators
+$(R^2_\vec x,\dots, R^k_\vec x)$ is a submersion.
+Therefore \ref{eq:codim-Sigma(L,x)} follows.
+
 Observe that 
 \[\codim\Sigma^k\ge \codim\Sigma^k(L,\vec x)-\dim\mathcal{L}.\]
 Therefore \ref{eq:codim-Sigma} follows.
