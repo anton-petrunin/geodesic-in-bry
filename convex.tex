@@ -41,29 +41,28 @@ For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, the
 Let $\mathfrak{C}$ be the convex hull of a subset $Q$ in a Euclidean space.
 By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
 that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
-This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it  is also easily seen to hold \emph{locally} in any two-dimensional Riemannian manifold.
+This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it 
+% is also easily seen to 
+holds \emph{locally} in any two-dimensional Riemannian manifold.
 
 Recall that a set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is called \emph{convex} if for any pair of points $x,y\in \mathfrak{C}$ any minimizing geodesic $[x,y]$ lies in $\mathfrak{C}$.
 A point in $\mathfrak{C}$ is called \emph{extreme} if it does not lie in an interior of a geodesic in~$\mathfrak{C}$.
+The \emph{convex hull} of a set $Q\subset M$ is the minimal convex subset of $M$  that contains $Q$.
+
+
+
 
 It seems to be a folklore belief that a version of the statement above should hold true in all Riemannian manifolds;
 see the discussion at mathoverflow \cite{petrunin-2009}.
 In the present note we prove that the somewhat counter-intuitive opposite is the case for \emph{generic} Riemannian manifolds.
 It agrees with the pattern: \emph{a typical object in your favorite theory looks like nothing you have ever seen before}.
 
-Further Riemannian manifolds will be assumed to be connected and $\mathcal C^\infty$-smooth.
+
+
+
+In order to define what generic means, we assume all Riemannian manifolds to be  connected and $\mathcal C^\infty$-smooth.
 Given a positive integer $k$, we say that a property $\mathcal P$ holds for \emph{$\mathcal C^k$-generic} Riemannian metric $g$ on a manifold $M$ 
 if the property $\mathcal P$ holds for a dense \emph{G-delta set} (that is, a countable intersection of open subsets) of metric tensors in the $\mathcal C^k$-topology.
-
-\begin{thm}{Minor theorem}\label{cor:main}
-Let $(M,g)$ be a $\mathcal C^2$-generic Riemannian manifold.
-Then any convex subset $\mathfrak C$ of $(M,g)$ is either contained in a geodesic
-or \emph{full-dimensional}; that is, the interior of $\mathfrak C$ is nonempty.
-\end{thm}
-
-A proof of the minor theorem in case $\dim M=3$  has been sketched by Robert Bryant \cite{Bryant};
-for $\dim M\ge 4$ it was proved by Thomas Murphy and Frederick Wilhelm \cite{Wilhelm}.
-If $\dim M \le 2$, then the statement is rather trivial and holds true for all Riemannian metrics, not only for generic ones.
 
 \begin{thm}{Main theorem}\label{thm:main}
 Let $\mathfrak C$ be an arbitrary convex subset of a $\mathcal C^2$-generic Riemannian manifold $(M,g)$.
@@ -73,24 +72,36 @@ In particular, if $\dim M\ge 3$ and $\mathfrak C$ is not contained in a geodesic
 extreme points of $\mathfrak{C}$ is dense in~$\partial\mathfrak{C}$.
 \end{thm}
 
-Recall that the \emph{convex hull} of a set $Q$ is defined as the minimal convex set (with respect to inclusion) that contains $Q$.
-According to Carathéodory's theorem, the convex hull of  any compact set of a Euclidean space (as well as sphere or the Lobachevsky space) is compact.
-According to the following corollary, the latter almost never holds in Riemannian manifolds.
+
+
+If $\dim (M) =2$, the statement is rather trivial and holds true for \emph{all} Riemannian metrics not only the generic ones.
+As a consequence  of the main theorem for $\dim (M) \geq 3$, we obtain the following:
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
 Let $Q$ be a closed subset of a $\mathcal C^2$-generic Riemannian manifold $(M,g)$ of dimension at least $3$. If $Q$ does not lie in a  geodesic and
 the convex hull $\mathfrak C$ of $Q$ is closed, then $\partial \mathfrak C \subset Q$.
 \end{thm}
 
-In the case that the  set $Q$ consist of $3$ points, this corollary solves the \emph{standing conjecture} formulated by Marcel Berger \cite[Note 6.1.3.1]{berger-2003}.
-It seems plausible that  the following more exact form of the conjecture might be squeezed out from our key lemma.
+Note that the corollary gives a positive resolution of a conjecture formulated by Marcel Berger
+\cite[Note 6.1.3.1]{berger-2003}, stating that convex hulls of $3$ points in most Riemannian manifolds do not need to be  compact.
+It seems plausible that  the following more exact form of Berger's conjecture might be squeezed out from our key lemma.%
+\footnote{More open questions are listed in  Appendix \ref{app:remarks}.}
 
-\begin{thm}{Conjecture}  Let $M$ be an arbitrary Riemannian manifold of dimension at least 3.
+\begin{thm}{Conjecture}  Let $(M,g)$ be an arbitrary Riemannian manifold of dimension at least 3.
 If the convex hull of any 3-point subset is compact,
-then $M$ has constant curvature.
+then $(M,g)$ has constant curvature.
 \end{thm}
 
-More open questions are listed in  Appendix \ref{app:remarks}.
+Again, Carathéodory's  theorem implies that the convex hull of any  compact subset in the round sphere, Euclidean or Lobachevsky space  is compact; locally, this compactness holds true for all 2-dimensional Riemannian manifolds.
+That explains the conditions in the conjecture.
+
+The following corollary is essentially known, for $\dim (M)=3$ its proof has been sketched by Robert Bryant \cite{Bryant} and, for $\dim (M)\geq 4$, it was proved by Thomas Murphy and Frederick Wilhelm \cite{Wilhelm}.
+
+\begin{thm}{Corollary}\label{cor:main}
+Let $(M,g)$ be a $\mathcal C^2$-generic Riemannian manifold.
+Then any convex subset $\mathfrak C$ of $(M,g)$ is either contained in a geodesic
+or \emph{full-dimensional}; that is, the interior of $\mathfrak C$ is nonempty.
+\end{thm}
 
 The proofs are built on the following proposition.
 Its formulation uses the notion of \emph{rank} of a point $p$ in a closed convex set $\mathfrak{C}$;
@@ -105,12 +116,12 @@ that is, all boundary points of $\mathfrak{C}$ are extreme.
 \end{thm}
 
 
-The proof is built on the key lemma stated in the following section;   
+The proof relies on the key lemma stated in the following section;   
 it describes a necessary condition on a geodesic in a Riemannian manifold that stays
 % can run 
-in some convex, possibly non-smooth, hypersurface.
-If the geodesic contains a point of rank at least 2, then this condition implies a non-trivial
-statement on the curvature tensor of the manifold.
+in convex subset $\mathfrak C$.
+If the geodesic  lies in $\partial \mathfrak C$ and  contains a point of rank at least 2, then this condition implies a non-trivial
+property  of the curvature tensor.
 Then we show that the curvature tensor of a generic Riemannian manifold does not meet this property.
 The latter part is technical but straightforward; it is done by applying the Thom transversality theorem; see Appendix \ref{sec:normalization}.
 
@@ -290,7 +301,7 @@ It remains to note that $g\in Z(M)$ if and only if $(M,g)$ has an exceptional ge
 \qeds
 
 
-\section{Two theorems}
+\section{Main theorem}
 
 The following proposition is a special case of a result of Nan Li and Aaron Naber \cite[Theorem 1.6]{li-naber}.
 It also can be deduced from the result of Luděk 
@@ -313,7 +324,7 @@ By the main proposition (\ref{prom:rank}), $d=0, 1$, or $m$.
 If $d=0$, then $\mathfrak{C}$ is a single point.
 If $d=1$, then $\mathfrak C\setminus \mathfrak B$ is a  geodesic in $(M,g)$;
 hence $\mathfrak C$ is contained in a  geodesic as well.
-If $d=m$, then by the invariance of domain we have  $\mathfrak C\setminus \mathfrak B$ is open in $M$; that is, $\mathfrak C$ is full-dimensional --- the minor theorem is proved.
+If $d=m$, then by the invariance of domain we have  $\mathfrak C\setminus \mathfrak B$ is open in $M$; that is, $\mathfrak C$ is full-dimensional --- \ref{cor:main} is proved.
 
 By the main proposition (\ref{prom:rank}) any non-extreme point $x\in \partial \mathfrak C$ has rank 1.
 Thus, there is a unique line in $\K_x\mathfrak C$ and it is the tangent line of a geodesic $\gamma\subset\mathfrak C$ that has $p$ as an inner point. 
@@ -540,10 +551,11 @@ Therefore \ref{eq:codim-Sigma} follows.
 
 \section{Final remarks}\label{app:remarks}
 
-It is expected that the following question admits an affirmative answer.
+We expect that the following question admits an affirmative answer.
 
 \begin{thm}{Open question}
-Is it true that any Riemannian manifold $(M,g)$ contains a nontrivial geodesic  that runs in some convex hypersurface?
+Is it true that any Riemannian manifold $(M,g)$ contains a nontrivial geodesic  that runs in the boundary of some convex 
+subset?
 \end{thm}
 
 The following question, related to the first one,  also seems to require new tools for a solution.
