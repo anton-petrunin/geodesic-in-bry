@@ -71,8 +71,8 @@ extreme points of $\mathfrak{C}$ is dense in~$\partial\mathfrak{C}$.
 
 
 
-If $\dim (M) =2$, the statement is rather trivial and holds true for \emph{all} Riemannian metrics not only the generic ones.
-As a consequence  of the main theorem for $\dim (M) \geq 3$, we obtain the following:
+If $\dim M =2$, the statement is rather trivial and holds true for \emph{all} Riemannian metrics not only the generic ones.
+As a consequence  of the main theorem for $\dim M \geq 3$, we obtain the following:
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
 Let $Q$ be a closed subset of a $\mathcal C^2$-generic Riemannian manifold $(M,g)$ of dimension at least $3$. If $Q$ does not lie in a  geodesic and
@@ -89,7 +89,7 @@ If the convex hull of any 3-point subset is compact,
 then $(M,g)$ has constant curvature.
 \end{thm}
 
-The following corollary is essentially known, for $\dim (M)=3$ its proof has been sketched by Robert Bryant \cite{Bryant} and, for $\dim (M)\geq 4$, it was proved by Thomas Murphy and Frederick Wilhelm \cite{Wilhelm}.
+The following corollary is essentially known, for $\dim M=3$ its proof has been sketched by Robert Bryant \cite{Bryant} and, for $\dim M\geq 4$, it was proved by Thomas Murphy and Frederick Wilhelm \cite{Wilhelm}.
 
 \begin{thm}{Corollary}\label{cor:main}
 Let $(M,g)$ be a $\mathcal C^2$-generic Riemannian manifold.
@@ -235,7 +235,7 @@ In this section we will prove the main proposition \ref{prom:rank} modulo one cl
 
 Let $M$ be a smooth $m$-dimensional manifold with a Riemannian metric $g$.
 Suppose $\vec x$ is a nonzero tangent vector at a point $p\in M$.
-Recall that $R^k_\vec x\:\T_p\to\T_p$ denotes the Jacobi operators of $g$ of order $k$ for a tangent vector $\vec x\in\T_p$.
+Recall that $R^k_\vec x\:\T_p\z\to\T_p$ denotes the Jacobi operators of $g$ of order $k$ for a tangent vector $\vec x\in\T_p$.
 An invariant subspace $V\subset \T_p$ of $R^k_\vec x$ will be called \emph{exceptional} if $V\ni \vec x$ and $1< \dim V<m$.
 (Recall that $R^k_\vec x\cdot \vec x=0$
 for any $k$ and $\vec x\in \T_p$.
@@ -250,8 +250,8 @@ $\mathcal C^k$-generic Riemannian metric is not $k$-exceptional.
 \end{thm}
 
 For $k=2$  (and, probably,  also for $k=3$) every Riemannian metric is $k$-exceptional.
-However, for large $k$, the
-$k$-exceptionality clearly defines more and more restrictions on the curvature tensor.
+However, for larger $k$, the
+$k$-exceptionality defines more and more restrictions on the curvature tensor.
 Therefore, it is not surprising that \emph{most}
 Riemannian metrics are not $k$-exceptional, for sufficiently large $k$.
 A formal proof of this claim is built on 
@@ -427,7 +427,7 @@ The expression of the curvature tensor in terms of the metric and its derivative
 $$\rho_k\:\mathcal{G}^k\to \mathcal{R}^k.$$
 
 Suppose that $(G^1,\dots,G^k)\in \mathcal{N}^k$.
-Then for any $k\ge 0$ we have
+Then for any $k\ge 2$ we have
 \[G^k=a_k\cdot  R^k + A^k,\eqlbl{eq:a+A}\]
 where $a_k$ is a nonzero constant and $A^k$ is a field of self-adjoint operators that can be written as a polynomial of $R^2,\dots R^{k-2}$.
 This statement follows easily from the formula derived by Old\v{r}ich Kowalski and Martin Belger \cite[Proposition 2.2]{kowalski-belger}.
@@ -436,7 +436,6 @@ This statement follows easily from the formula derived by Old\v{r}ich Kowalski a
 Note that formula \ref{eq:a+A} can be reverted 
 \[R^k=\tfrac 1{a_k}\cdot  G^k + B^k,\eqlbl{eq:a+B}\]
 where $B^k$ is a field of self-adjoint operators that can be written as a polynomial of $G^2,\dots G^{k-2}$.
-
 Therefore we get the following:
 
 

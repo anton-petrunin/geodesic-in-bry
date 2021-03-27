@@ -1,0 +1,4 @@
+convex.bib
+convex.tex
+mppics/pic-1.mps
+paper.sty
