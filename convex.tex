@@ -38,10 +38,11 @@ For example, if a convex set in $(M,g)$ is bounded by a smooth hypersurface, the
 %Try to think about this question for some time, and then read further.
 
 \section{Introduction}
-Let $\mathfrak{C}$ be the convex hull of a subset $Q$ in a Euclidean space.
-By Carathéodory's theorem, any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
-that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$.
-This statement admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it 
+Let $\mathfrak{C}$ be the convex hull of a compact subset $Q$ in the Euclidean space $\R^m$.
+By Carathéodory's theorem, $\mathfrak{C}$ is the set of all convex combinations of at most $(m+1)$-tuples of points on $Q$, \cite{Handbook}. Thus, $\mathfrak{C}$ is a compact convex subset.  Any point in $\mathfrak{C}\setminus Q$ is an inner point of a line segment contained in $\mathfrak{C}$;
+that is, the complement $\mathfrak{C} \setminus Q$ does not contain extreme points of $\mathfrak{C}$. 
+
+The compactness of the convex hull and, therefore, the existence of a huge variety of convex subsets with many non-extreme points on the boundary, admits a straightforward generalization to the sphere and the  Lobachevsky space; moreover, it 
 % is also easily seen to 
 holds \emph{locally} in any two-dimensional Riemannian manifold.
 
@@ -303,7 +304,7 @@ Zajíček~\cite{zajicek}.
 Let $\mathfrak{C}$ be a closed convex set in a Riemannian manifold $(M,g)$.
 Then the set of points in $\mathfrak{C}$ with rank at most $k$ is countably \emph{$k$-rectifiable};
 that is, this set can be  covered by images of a countable set of Lipschitz maps $\RR^k\to (M,g)$.
-In particular, this set contains at most countably many disjoint sets with positive $k$-dimensional Hausdorff measure.
+In particular, this set contains at most countably many disjoint Borel sets with positive $k$-dimensional Hausdorff measure.
 \end{thm}
 
 \parit{Proof of \ref{cor:main} and \ref{thm:main}.}
@@ -336,11 +337,23 @@ Observe that any nonextreme point of $\mathfrak{C}$ is a  nonextreme point of $\
 Hence, the statement follows.
 \qeds
 
-\parit{Proof of \ref{cor:caratheodory}.}
-Start with $Q=Q_0$ and define inductively $Q_{i+1}$ to be the union of all minimizing geodesics between pairs of points of $Q_i$.
-Note that the union $\mathfrak{C}= \bigcup_{i} 
-Q_i$ is the convex hull of $Q$.
 
+A few words before we proceed to the proof of  \ref{cor:caratheodory}.  For any subset $Q$ of a Riemannian manifold $M$,
+we set $Q=Q_0$ and let inductively $Q_{i+1}$ to be the union of all minimizing geodesics between pairs of points of $Q_i$.
+By definition, the increasing countable union $\mathfrak{C}= \bigcup_{i =0 }^{\infty}$ is the convex hull of $Q$.  
+By this description, any point in $\mathfrak{C} \setminus Q$ is a non-extreme point of the convex set $\mathfrak {C}$.
+
+Note, that 
+ if $M$ is complete and $Q$ is compact, then each $Q_i$ is  compact. In the Euclidean space $M=\R^m$  (as well as in the round sphere or in the Lobachevsky space) we have 
+$\mathfrak{C} =Q_m$ by Carath\'eodory's theorem, \cite{Handbook}. As a consequence of Corollary
+ \ref{cor:caratheodory}, we will know that in a generic Riemannian manifold the convex hull $\mathfrak{C}$ of $Q$ is strictly larger than  $Q_i$, for all $i$.
+
+
+
+
+
+
+\parit{Proof of \ref{cor:caratheodory}.}
 Without loss of generality we can assume that $\mathfrak{C}$ is a proper subset of $M$; in particular $\partial\mathfrak{C}\ne \varnothing$.
 Since $Q$ is not contained in a geodesic, by the main theorem, $\mathfrak{C}$ has a non-trivial interior.
 By the construction of $\mathfrak{C}$ above, any point $x\in \mathfrak{C} \setminus Q$ is not an extreme point of~$\mathfrak{C}$.
