@@ -67,18 +67,19 @@ if the property $\mathcal P$ holds for a dense \emph{G-delta set} (that is, a co
 Let $\mathfrak C$ be an arbitrary convex subset of a $\mathcal C^2$-generic Riemannian manifold $(M,g)$.
 Then the set of non-extreme points in $\mathfrak C$ is the union of an open set and at most countable family of geodesics in $(M,g)$. 
 
-In particular, if $\dim M\ge 3$ and $\mathfrak C$ is not contained in a geodesic, then the set of
+In particular, if $\dim M\ge 3$ and no connected component of $\mathfrak C$ is  a geodesic, then the set of
 extreme points of $\mathfrak{C}$ is dense in~$\partial\mathfrak{C}$.
 \end{thm}
 
-
+Note that our definition of convexity does not require connectedness. However, any convex subset $\mathfrak C$ is locally connected, and $\mathfrak C$  is 
+connected if the manifold $M$ is complete or $\mathfrak C$ is contained  in some compact convex subset of $M$.
 
 If $\dim M =2$, the statement is rather trivial and holds true for \emph{all} Riemannian metrics not only the generic ones.
 As a consequence  of the main theorem for $\dim M \geq 3$, we obtain the following:
 
 \begin{thm}{Corollary}\label{cor:caratheodory}
 Let $Q$ be a closed subset of a $\mathcal C^2$-generic Riemannian manifold $(M,g)$ of dimension at least $3$. If $Q$ does not lie in a  geodesic and
-the convex hull $\mathfrak C$ of $Q$ is closed, then $\partial \mathfrak C \subset Q$.
+the convex hull $\mathfrak C$ of $Q$ is closed and connected, then $\partial \mathfrak C \subset Q$.
 \end{thm}
 
 The corollary gives a positive resolution of a conjecture formulated by Marcel Berger
@@ -95,7 +96,7 @@ The following corollary is essentially known, for $\dim M=3$ its proof has been 
 
 \begin{thm}{Corollary}\label{cor:main}
 Let $(M,g)$ be a $\mathcal C^2$-generic Riemannian manifold.
-Then any convex subset $\mathfrak C$ of $(M,g)$ is either contained in a geodesic
+Then any connected  convex subset $\mathfrak C$ of $(M,g)$ is either contained in a geodesic
 or \emph{full-dimensional}; that is, the interior of $\mathfrak C$ is nonempty.
 \end{thm}
 
@@ -310,7 +311,8 @@ In particular, this set contains at most countably many disjoint Borel sets with
 \end{thm}
 
 \parit{Proof of \ref{cor:main} and \ref{thm:main}.}
-Assume $\mathfrak{C}$ is closed.
+We may assume that $\mathfrak {C}$ is connected. Assume, in addition, that  $\mathfrak{C}$ is closed.
+
 According to \cite[Theorem 1.6]{cheeger-gromoll}, a connected closed convex set $\mathfrak{C}$ in a Riemannian manifold $(M,g)$ is homeomorphic to a manifold with boundary, say~$\mathfrak{B}$.
 Moreover, the complement $\mathfrak{C}\backslash \mathfrak{B}$ is a totally geodesic submanifold of $(M,g)$; denote its dimension by $d$.
 
@@ -362,7 +364,7 @@ By the construction of $\mathfrak{C}$ above, any point $x\in \mathfrak{C} \setmi
 Assume $\partial \mathfrak{C} \not\subset Q$.
 By the main theorem, the topological manifold $\partial \mathfrak{C}$ is the union of the closed subset $Q\cap \partial \mathfrak{C}$ and a countable union of geodesics.
 But $\partial \mathfrak{C} \setminus Q$ is an $(m-1)$-dimensional topological manifold.
-In particular, it is not a union of countably many disjoint simple curves --- a contradiction.
+By dimensional reasons,  it is not a union of countably many rectifiable  curves --- a contradiction.
 \qeds
 
 \appendix
@@ -403,7 +405,7 @@ for any $i$.
 Moreover, for an array of polynomials $G^1,\dots,G^k\:\T\to\mathcal{S}$ such that $G^i$ is homogeneous of degree $i$ and \ref{eq:Gaussi} holds for each $i$, the sum \ref{eq:k-jet+} defines a normal $k$-jet;
 that is, \ref{eq:Gaussi} is the only condition on the normality of jets.
 
-From \ref{eq:Gaussi} we get that $G^1=0$.
+>From \ref{eq:Gaussi} we get that $G^1=0$.
 Equivalently, Christoffel symbols vanish in the normal coordinates.
 
 Choose $\vec x\in \T$; denote by $\mathcal{S}_\vec x$ the subspace of the operators $S\in\mathcal{S}$ such that $S\cdot \vec x=0$.
