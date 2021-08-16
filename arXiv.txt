@@ -1,4 +1,5 @@
 convex.tex
 paper.sty
 convex.bbl
+convex.bib
 mppics/pic-1.mps
